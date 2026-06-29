@@ -145,3 +145,9 @@
 a[href*="lovable.dev/projects"] {
   display: none !important;
 }
+#lovable-badge-cta{
+  display: none;
+}
+#lovable-badge-cta{
+  position: absolute;
+}
