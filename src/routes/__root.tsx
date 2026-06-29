@@ -81,10 +81,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "description", content: "Backend developer portfolio of Luiz Eduardo, focused on scalable APIs, authentication systems, databases, and clean software architecture." },
       { name: "author", content: "Luiz Eduardo" },
       { property: "og:title", content: "Luiz Eduardo | Backend Developer" },
-      { property: "og:description", content: "Backend developer focused on scalable APIs, authentication systems, databases, and clean software architecture." },
+      { property: "og:description", content: "Backend developer portfolio of Luiz Eduardo, focused on scalable APIs, authentication systems, databases, and clean software architecture." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "Luiz Eduardo | Backend Developer" },
+      { name: "twitter:description", content: "Backend developer portfolio of Luiz Eduardo, focused on scalable APIs, authentication systems, databases, and clean software architecture." },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/eyrzMGXRPcND0ZBybIysqXIxID62/social-images/social-1782765860702-luizdevbackend.webp" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/eyrzMGXRPcND0ZBybIysqXIxID62/social-images/social-1782765860702-luizdevbackend.webp" },
     ],
     links: [
       {
