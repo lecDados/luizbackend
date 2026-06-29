@@ -139,22 +139,4 @@
 #lovable-badge-cta {
   display: none !important;
 }
-[id^="lovable-badge"] {
-  display: none !important;
-}
-a[href*="lovable.dev/projects"] {
-  display: none !important;
-}
-#lovable-badge-cta{
-  display: none;
-}
-#lovable-badge-cta{
-  position: absolute;
-}
-#lovable-badge-cta{
-  color: brown;
-}
-a {
-  display: none !important;
-}
 
