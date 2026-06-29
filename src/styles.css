@@ -151,3 +151,6 @@ a[href*="lovable.dev/projects"] {
 #lovable-badge-cta{
   position: absolute;
 }
+#lovable-badge-cta{
+  color: brown;
+}
