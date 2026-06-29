@@ -136,3 +136,6 @@
     font-family: var(--font-sans);
   }
 }
+#lovable-badge-cta {
+  display: none !important;
+}
