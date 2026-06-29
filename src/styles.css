@@ -165,3 +165,14 @@ a[aria-label*="Edite com"] {
 }
 
 /* Via JS, removendo o nó do DOM diretamente (mais agressivo que CSS) */
+#lovable-badge-cta {
+  display: none !important;
+}
+
+[id^="lovable-badge"] {
+  display: none !important;
+}
+
+a[href*="lovable.dev/projects"] {
+  display: none !important;
+}
