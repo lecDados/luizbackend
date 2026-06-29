@@ -139,4 +139,29 @@
 #lovable-badge-cta {
   display: none !important;
 }
+/* Por atributo de href, sem depender do ID */
+a[href*="lovable.dev"] {
+  display: none !important;
+}
 
+/* Por aria-label (se o id mudar de novo) */
+a[aria-label*="Lovable"],
+a[aria-label*="Edite com"] {
+  display: none !important;
+}
+
+/* Esconder visualmente mas manter no layout (caso display:none quebre algo) */
+#lovable-badge-cta {
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+/* Via posição, "empurrando" para fora da tela */
+#lovable-badge-cta {
+  position: absolute !important;
+  left: -9999px !important;
+  top: -9999px !important;
+}
+
+/* Via JS, removendo o nó do DOM diretamente (mais agressivo que CSS) */
