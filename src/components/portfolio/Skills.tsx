@@ -7,6 +7,10 @@ const backendSkills = [
   "Docker",
   "MongoDB",
   "MySQL",
+  "HTML 5",
+  "CSS 3",
+  "JavaScript",
+  "Jest",
 ];
 
 const versionControlSkills = ["Git", "GitHub", "GitFlow"];

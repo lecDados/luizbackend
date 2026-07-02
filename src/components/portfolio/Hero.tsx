@@ -10,6 +10,10 @@ const technologies = [
   "Git",
   "GitHub",
   "Zod",
+  "HTML 5",
+  "CSS 3",
+  "Jest",
+
 ];
 
 export function Hero() {
