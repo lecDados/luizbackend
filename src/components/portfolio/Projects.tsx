@@ -148,7 +148,7 @@ export function Projects() {
                   className="inline-flex items-center gap-2 rounded-md border border-border bg-background px-4 py-2 text-sm font-medium text-foreground hover:border-orange-500/30 hover:bg-accent"
                 >
                   <Github className="h-4 w-4" />
-                  GitHub
+                  {project.liveUrl ? "GitHub" : "GitHub Repository"}
                 </a>
               </div>
             </article>
