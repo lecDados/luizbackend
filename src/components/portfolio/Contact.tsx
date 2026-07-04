@@ -34,8 +34,9 @@ export function Contact() {
         <h2 className="text-2xl font-semibold tracking-tight md:text-3xl">
           Contact
         </h2>
-        <p className="mt-2 text-muted-foreground">
-          Let's work together.
+        <div className="mt-3 h-1 w-12 rounded-full bg-orange-500/70" />
+        <p className="mt-4 text-muted-foreground">
+          Let&apos;s work together.
         </p>
 
         <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
