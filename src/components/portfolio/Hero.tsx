@@ -26,7 +26,7 @@ export function Hero() {
         <h1 className="text-4xl font-bold tracking-tight md:text-6xl">
           Luiz Eduardo
         </h1>
-        <p className="mt-2 text-lg font-medium text-muted-foreground md:text-xl">
+        <p className="mt-2 text-lg font-medium text-orange-400 md:text-xl">
           Backend Developer
         </p>
         <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground">
