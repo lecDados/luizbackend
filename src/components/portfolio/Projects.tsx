@@ -103,53 +103,55 @@ export function Projects() {
                 loading="lazy"
                 className="aspect-video w-full rounded-lg object-cover"
               />
-              <h3 className="mt-5 text-xl font-semibold text-neutral-950">
-                {project.name}
-              </h3>
-              <p className="mt-2 text-sm leading-relaxed text-neutral-900/80">
-                {project.description}
-              </p>
-              {project.features && (
-                <ul className="mt-4 grid grid-cols-1 gap-1.5 text-sm text-neutral-900/80 sm:grid-cols-2">
-                  {project.features.map((feature) => (
-                    <li key={feature} className="flex items-start gap-2">
-                      <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-neutral-900/50" />
-                      {feature}
-                    </li>
+              <div className="mt-5 rounded-xl border border-border bg-card p-5 shadow-sm">
+                <h3 className="text-xl font-semibold text-card-foreground">
+                  {project.name}
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                  {project.description}
+                </p>
+                {project.features && (
+                  <ul className="mt-4 grid grid-cols-1 gap-1.5 text-sm text-muted-foreground sm:grid-cols-2">
+                    {project.features.map((feature) => (
+                      <li key={feature} className="flex items-start gap-2">
+                        <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-orange-500/70" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                )}
+                <div className="mt-4 flex flex-wrap gap-2">
+                  {project.tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="inline-flex items-center rounded-md border border-border px-2 py-1 text-xs font-medium text-muted-foreground"
+                    >
+                      {tag}
+                    </span>
                   ))}
-                </ul>
-              )}
-              <div className="mt-4 flex flex-wrap gap-2">
-                {project.tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="inline-flex items-center rounded-md border border-neutral-900/15 bg-white/10 px-2 py-1 text-xs font-medium text-neutral-900/85"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
-              <div className="mt-6 flex flex-wrap items-center gap-3">
-                {project.liveUrl && (
+                </div>
+                <div className="mt-6 flex flex-wrap items-center gap-3">
+                  {project.liveUrl && (
+                    <a
+                      href={project.liveUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 rounded-md border border-orange-500/40 bg-background px-4 py-2 text-sm font-medium text-orange-400 hover:border-orange-500/60 hover:bg-orange-500/10"
+                    >
+                      <ExternalLink className="h-4 w-4" />
+                      Visualizar Projeto
+                    </a>
+                  )}
                   <a
-                    href={project.liveUrl}
+                    href={project.repository}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 rounded-md border border-neutral-900 bg-neutral-900 px-4 py-2 text-sm font-medium text-white hover:bg-neutral-800"
+                    className="inline-flex items-center gap-2 rounded-md border border-border bg-background px-4 py-2 text-sm font-medium text-foreground hover:border-orange-500/30 hover:bg-accent"
                   >
-                    <ExternalLink className="h-4 w-4" />
-                    Visualizar Projeto
+                    <Github className="h-4 w-4" />
+                    {project.liveUrl ? "GitHub" : "GitHub Repository"}
                   </a>
-                )}
-                <a
-                  href={project.repository}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-md border border-neutral-900/20 bg-white/10 px-4 py-2 text-sm font-medium text-neutral-900 hover:bg-white/20"
-                >
-                  <Github className="h-4 w-4" />
-                  {project.liveUrl ? "GitHub" : "GitHub Repository"}
-                </a>
+                </div>
               </div>
             </article>
           ))}
