@@ -7,6 +7,7 @@ import { Books } from "@/components/portfolio/Books";
 import { About } from "@/components/portfolio/About";
 import { Contact } from "@/components/portfolio/Contact";
 import { Footer } from "@/components/portfolio/Footer";
+import { CodeBackground } from "@/components/portfolio/CodeBackground";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -33,7 +34,8 @@ export const Route = createFileRoute("/")({
 
 function Portfolio() {
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="relative min-h-screen bg-background text-foreground">
+      <CodeBackground />
       <Nav />
       <main>
         <Hero />
