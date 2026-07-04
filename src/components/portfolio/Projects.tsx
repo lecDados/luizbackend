@@ -94,7 +94,7 @@ export function Projects() {
           {projects.map((project) => (
             <article
               key={project.name}
-              className="group rounded-xl border border-orange-700/30 bg-orange-600 p-5 shadow-none transition-colors hover:bg-orange-600/90"
+              className="rounded-xl border border-border bg-card p-5 shadow-card"
             >
               <img
                 src={project.image}
@@ -104,55 +104,53 @@ export function Projects() {
                 loading="lazy"
                 className="aspect-video w-full rounded-lg object-cover"
               />
-              <div className="mt-5 rounded-xl border border-border bg-card p-5 shadow-sm">
-                <h3 className="text-xl font-semibold text-card-foreground">
-                  {project.name}
-                </h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                  {project.description}
-                </p>
-                {project.features && (
-                  <ul className="mt-4 grid grid-cols-1 gap-1.5 text-sm text-muted-foreground sm:grid-cols-2">
-                    {project.features.map((feature) => (
-                      <li key={feature} className="flex items-start gap-2">
-                        <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-orange-500/70" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                )}
-                <div className="mt-4 flex flex-wrap gap-2">
-                  {project.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="inline-flex items-center rounded-md border border-border px-2 py-1 text-xs font-medium text-muted-foreground"
-                    >
-                      {tag}
-                    </span>
+              <h3 className="mt-5 text-xl font-semibold text-card-foreground">
+                {project.name}
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                {project.description}
+              </p>
+              {project.features && (
+                <ul className="mt-4 grid grid-cols-1 gap-1.5 text-sm text-muted-foreground sm:grid-cols-2">
+                  {project.features.map((feature) => (
+                    <li key={feature} className="flex items-start gap-2">
+                      <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-muted-foreground/70" />
+                      {feature}
+                    </li>
                   ))}
-                </div>
-                <div className="mt-6 flex flex-wrap items-center gap-3">
-                  {project.liveUrl && (
-                    <a
-                      href={project.liveUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 rounded-md border border-orange-500/40 bg-background px-4 py-2 text-sm font-medium text-orange-400 hover:border-orange-500/60 hover:bg-orange-500/10"
-                    >
-                      <ExternalLink className="h-4 w-4" />
-                      Visualizar Projeto
-                    </a>
-                  )}
+                </ul>
+              )}
+              <div className="mt-4 flex flex-wrap gap-2">
+                {project.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="inline-flex items-center rounded-md border border-border px-2 py-1 text-xs font-medium text-muted-foreground"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+              <div className="mt-6 flex flex-wrap items-center gap-3">
+                {project.liveUrl && (
                   <a
-                    href={project.repository}
+                    href={project.liveUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 rounded-md border border-border bg-background px-4 py-2 text-sm font-medium text-foreground hover:border-orange-500/30 hover:bg-accent"
+                    className="inline-flex items-center gap-2 rounded-md border border-border bg-background px-4 py-2 text-sm font-medium text-foreground hover:bg-accent"
                   >
-                    <Github className="h-4 w-4" />
-                    {project.liveUrl ? "GitHub" : "GitHub Repository"}
+                    <ExternalLink className="h-4 w-4" />
+                    Visualizar Projeto
                   </a>
-                </div>
+                )}
+                <a
+                  href={project.repository}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-md border border-border bg-background px-4 py-2 text-sm font-medium text-foreground hover:bg-accent"
+                >
+                  <Github className="h-4 w-4" />
+                  {project.liveUrl ? "GitHub" : "GitHub Repository"}
+                </a>
               </div>
             </article>
           ))}
