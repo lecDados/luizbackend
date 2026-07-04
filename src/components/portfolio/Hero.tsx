@@ -33,7 +33,7 @@ export function Hero() {
           Backend developer focused on building scalable APIs, authentication
           systems, databases, and clean software architecture.
         </p>
-        <div className="mt-8 flex flex-wrap gap-2">
+        <div className="mt-8 flex flex-wrap gap-2 tecnologias">
           {technologies.map((technology) => (
             <span
               key={technology}

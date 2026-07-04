@@ -176,3 +176,6 @@ a[aria-label*="Edite com"] {
 a[href*="lovable.dev/projects"] {
   display: none !important;
 }
+.tecnologias{
+  color: oklch(0.55 0.18 25);
+}
