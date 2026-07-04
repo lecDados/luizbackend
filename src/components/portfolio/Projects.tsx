@@ -93,7 +93,7 @@ export function Projects() {
           {projects.map((project) => (
             <article
               key={project.name}
-              className="rounded-xl border border-border bg-card p-5 shadow-card"
+              className="group rounded-xl border border-orange-500/15 bg-card p-5 shadow-card transition-colors hover:border-orange-500/35 hover:shadow-[0_4px_24px_0_rgba(249,115,22,0.08)]"
             >
               <img
                 src={project.image}
@@ -109,6 +109,16 @@ export function Projects() {
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
                 {project.description}
               </p>
+              {project.features && (
+                <ul className="mt-4 grid grid-cols-1 gap-1.5 text-sm text-muted-foreground sm:grid-cols-2">
+                  {project.features.map((feature) => (
+                    <li key={feature} className="flex items-start gap-2">
+                      <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-orange-500/70" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              )}
               <div className="mt-4 flex flex-wrap gap-2">
                 {project.tags.map((tag) => (
                   <span
@@ -119,15 +129,26 @@ export function Projects() {
                   </span>
                 ))}
               </div>
-              <div className="mt-6">
+              <div className="mt-6 flex flex-wrap items-center gap-3">
+                {project.liveUrl && (
+                  <a
+                    href={project.liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 rounded-md border border-orange-500/40 bg-background px-4 py-2 text-sm font-medium text-orange-400 hover:border-orange-500/60 hover:bg-orange-500/10"
+                  >
+                    <ExternalLink className="h-4 w-4" />
+                    Visualizar Projeto
+                  </a>
+                )}
                 <a
                   href={project.repository}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-md border border-border bg-background px-4 py-2 text-sm font-medium text-foreground hover:bg-accent"
+                  className="inline-flex items-center gap-2 rounded-md border border-border bg-background px-4 py-2 text-sm font-medium text-foreground hover:border-orange-500/30 hover:bg-accent"
                 >
                   <Github className="h-4 w-4" />
-                  GitHub Repository
+                  GitHub
                 </a>
               </div>
             </article>
