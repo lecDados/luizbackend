@@ -5,6 +5,7 @@ export function About() {
         <h2 className="text-2xl font-semibold tracking-tight md:text-3xl">
           About Me
         </h2>
+        <div className="mt-3 h-1 w-12 rounded-full bg-orange-500/70" />
 
         <div className="mt-8 max-w-3xl rounded-xl border border-border bg-card p-6 shadow-card">
           <p className="text-base leading-relaxed text-muted-foreground">

@@ -38,7 +38,7 @@ export function Nav() {
             <button
               key={section.id}
               onClick={() => scrollTo(section.id)}
-              className="rounded-md px-3 py-2 text-sm font-medium text-muted-foreground hover:bg-accent hover:text-foreground"
+              className="rounded-md px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-accent hover:text-orange-400"
             >
               {section.label}
             </button>

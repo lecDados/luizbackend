@@ -32,7 +32,8 @@ export function Skills() {
         <h2 className="text-2xl font-semibold tracking-tight md:text-3xl">
           Skills
         </h2>
-        <p className="mt-2 text-muted-foreground">
+        <div className="mt-3 h-1 w-12 rounded-full bg-orange-500/70" />
+        <p className="mt-4 text-muted-foreground">
           Technologies and tools I work with.
         </p>
 
