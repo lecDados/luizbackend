@@ -50,11 +50,10 @@ const projects = [
     ],
   },
   {
-    name: "BTC Invest Dashboard",
+    name: "Painel de Investimento em BTC",
     description:
       "Platform for tracking the cryptocurrency market, with a focus on Bitcoin. The system queries a real-time API to monitor highs, lows, and indicators that help analyze investment opportunities.",
-    repository: "https://github.com/lecDados/btc-invest-dashboard",
-    liveUrl: "https://github.com/lecDados/btc-invest-dashboard",
+    repository: "https://github.com/lecDados/painelDeInvestimentoBTC.git",
     image: btcDashboard,
     tags: [
       "React",
