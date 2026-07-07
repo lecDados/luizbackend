@@ -143,20 +143,37 @@ export function Projects() {
         <div className="mt-3 h-1 w-12 rounded-full bg-orange-500/70" />
         <p className="mt-4 text-muted-foreground">Selected backend work.</p>
 
-        <div
-          ref={scrollerRef}
-          onMouseEnter={() => setPaused(true)}
-          onMouseLeave={() => setPaused(false)}
-          onTouchStart={() => setPaused(true)}
-          onTouchEnd={() => setPaused(false)}
-          onScroll={handleScroll}
-          className="mt-10 flex snap-x snap-mandatory gap-6 overflow-x-auto scroll-smooth pb-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
-        >
-          {projects.map((project) => (
-            <article
-              key={project.name}
-              className="w-[85%] shrink-0 snap-center rounded-xl border border-border bg-card p-5 shadow-card md:w-[calc(50%-0.75rem)]"
-            >
+        <div className="relative mt-10">
+          <button
+            type="button"
+            aria-label="Projeto anterior"
+            onClick={() => scrollByDir(-1)}
+            className="absolute left-1 top-1/2 z-10 hidden -translate-y-1/2 items-center justify-center rounded-full border border-border bg-background/80 p-2 text-foreground shadow-card backdrop-blur transition hover:bg-accent hover:text-orange-400 md:flex"
+          >
+            <ChevronLeft className="h-5 w-5" />
+          </button>
+          <button
+            type="button"
+            aria-label="Próximo projeto"
+            onClick={() => scrollByDir(1)}
+            className="absolute right-1 top-1/2 z-10 hidden -translate-y-1/2 items-center justify-center rounded-full border border-border bg-background/80 p-2 text-foreground shadow-card backdrop-blur transition hover:bg-accent hover:text-orange-400 md:flex"
+          >
+            <ChevronRight className="h-5 w-5" />
+          </button>
+          <div
+            ref={scrollerRef}
+            onMouseEnter={() => setPaused(true)}
+            onMouseLeave={() => setPaused(false)}
+            onTouchStart={() => setPaused(true)}
+            onTouchEnd={() => setPaused(false)}
+            onScroll={handleScroll}
+            className="flex snap-x snap-mandatory gap-4 overflow-x-auto scroll-smooth pb-4 md:gap-6 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+          >
+            {projects.map((project) => (
+              <article
+                key={project.name}
+                className="w-[88%] shrink-0 snap-center rounded-xl border border-border bg-card p-4 shadow-card sm:p-5 md:w-[calc(50%-0.75rem)]"
+              >
               <img
                 src={project.image}
                 alt={project.name}
