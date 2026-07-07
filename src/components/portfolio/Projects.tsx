@@ -84,22 +84,49 @@ export function Projects() {
   const scrollerRef = useRef<HTMLDivElement>(null);
   const [index, setIndex] = useState(0);
   const [paused, setPaused] = useState(false);
+  const isManualScroll = useRef(false);
+  const resumeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
     if (paused) return;
     const id = setInterval(() => {
+      if (isManualScroll.current) return;
       setIndex((i) => (i + 1) % projects.length);
-    }, 1800);
+    }, 5000);
     return () => clearInterval(id);
   }, [paused]);
 
   useEffect(() => {
     const scroller = scrollerRef.current;
-    if (!scroller) return;
+    if (!scroller || isManualScroll.current) return;
     const child = scroller.children[index] as HTMLElement | undefined;
     if (!child) return;
     scroller.scrollTo({ left: child.offsetLeft - scroller.offsetLeft, behavior: "smooth" });
   }, [index]);
+
+  const handleScroll = () => {
+    const scroller = scrollerRef.current;
+    if (!scroller) return;
+    isManualScroll.current = true;
+    if (resumeTimer.current) clearTimeout(resumeTimer.current);
+    resumeTimer.current = setTimeout(() => {
+      isManualScroll.current = false;
+    }, 150);
+
+    const center = scroller.scrollLeft + scroller.clientWidth / 2;
+    let closest = 0;
+    let minDistance = Infinity;
+    Array.from(scroller.children).forEach((child, i) => {
+      const el = child as HTMLElement;
+      const childCenter = el.offsetLeft + el.clientWidth / 2;
+      const distance = Math.abs(center - childCenter);
+      if (distance < minDistance) {
+        minDistance = distance;
+        closest = i;
+      }
+    });
+    setIndex(closest);
+  };
 
   return (
     <section id="projects" className="px-6 py-20">
@@ -116,6 +143,7 @@ export function Projects() {
           onMouseLeave={() => setPaused(false)}
           onTouchStart={() => setPaused(true)}
           onTouchEnd={() => setPaused(false)}
+          onScroll={handleScroll}
           className="mt-10 flex snap-x snap-mandatory gap-6 overflow-x-auto scroll-smooth pb-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
         >
           {projects.map((project) => (
