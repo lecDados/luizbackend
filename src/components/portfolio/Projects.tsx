@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from "react";
 import { Github, ExternalLink } from "lucide-react";
 import inventoryProject from "@/assets/inventory-project.jpg";
 import projetoPi from "@/assets/projeto-pi.jpg";
@@ -80,6 +81,26 @@ const projects = [
 ];
 
 export function Projects() {
+  const scrollerRef = useRef<HTMLDivElement>(null);
+  const [index, setIndex] = useState(0);
+  const [paused, setPaused] = useState(false);
+
+  useEffect(() => {
+    if (paused) return;
+    const id = setInterval(() => {
+      setIndex((i) => (i + 1) % projects.length);
+    }, 1800);
+    return () => clearInterval(id);
+  }, [paused]);
+
+  useEffect(() => {
+    const scroller = scrollerRef.current;
+    if (!scroller) return;
+    const child = scroller.children[index] as HTMLElement | undefined;
+    if (!child) return;
+    scroller.scrollTo({ left: child.offsetLeft - scroller.offsetLeft, behavior: "smooth" });
+  }, [index]);
+
   return (
     <section id="projects" className="px-6 py-20">
       <div className="mx-auto max-w-[1200px]">
@@ -89,11 +110,18 @@ export function Projects() {
         <div className="mt-3 h-1 w-12 rounded-full bg-orange-500/70" />
         <p className="mt-4 text-muted-foreground">Selected backend work.</p>
 
-        <div className="mt-10 grid gap-6 md:grid-cols-2">
+        <div
+          ref={scrollerRef}
+          onMouseEnter={() => setPaused(true)}
+          onMouseLeave={() => setPaused(false)}
+          onTouchStart={() => setPaused(true)}
+          onTouchEnd={() => setPaused(false)}
+          className="mt-10 flex snap-x snap-mandatory gap-6 overflow-x-auto scroll-smooth pb-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+        >
           {projects.map((project) => (
             <article
               key={project.name}
-              className="rounded-xl border border-border bg-card p-5 shadow-card"
+              className="w-[85%] shrink-0 snap-center rounded-xl border border-border bg-card p-5 shadow-card md:w-[calc(50%-0.75rem)]"
             >
               <img
                 src={project.image}
@@ -152,6 +180,18 @@ export function Projects() {
                 </a>
               </div>
             </article>
+          ))}
+        </div>
+
+        <div className="mt-4 flex justify-center gap-2">
+          {projects.map((p, i) => (
+            <button
+              key={p.name}
+              type="button"
+              aria-label={`Ir para ${p.name}`}
+              onClick={() => setIndex(i)}
+              className={`h-2 rounded-full transition-all ${i === index ? "w-6 bg-orange-500" : "w-2 bg-muted-foreground/40"}`}
+            />
           ))}
         </div>
       </div>
