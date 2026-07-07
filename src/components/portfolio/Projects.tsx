@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { Github, ExternalLink } from "lucide-react";
+import { Github, ExternalLink, ChevronLeft, ChevronRight } from "lucide-react";
 import inventoryProject from "@/assets/inventory-project.jpg";
 import projetoPi from "@/assets/projeto-pi.jpg";
 import partyDecorWebsite from "@/assets/party-decor-website.jpg";
