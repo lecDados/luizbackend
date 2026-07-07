@@ -230,8 +230,9 @@ export function Projects() {
                   {project.liveUrl ? "GitHub" : "GitHub Repository"}
                 </a>
               </div>
-            </article>
-          ))}
+              </article>
+            ))}
+          </div>
         </div>
 
         <div className="mt-4 flex justify-center gap-2">
