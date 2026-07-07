@@ -128,6 +128,12 @@ export function Projects() {
     setIndex(closest);
   };
 
+  const scrollByDir = (dir: 1 | -1) => {
+    const next = (index + dir + projects.length) % projects.length;
+    setIndex(next);
+    isManualScroll.current = false;
+  };
+
   return (
     <section id="projects" className="px-6 py-20">
       <div className="mx-auto max-w-[1200px]">
