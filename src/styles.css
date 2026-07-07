@@ -148,6 +148,9 @@
   --sidebar-accent-foreground: oklch(0.22 0.02 260);
   --sidebar-border: oklch(0.88 0.02 80);
   --sidebar-ring: oklch(0.65 0.15 45);
+}
+
+
 
 @layer base {
   * {
