@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { useEffect, useState } from "react";
+import { Menu, X, Sun, Moon } from "lucide-react";
 
 const sections = [
   { id: "hero", label: "Home" },
@@ -12,6 +12,26 @@ const sections = [
 
 export function Nav() {
   const [open, setOpen] = useState(false);
+  const [theme, setTheme] = useState<"dark" | "light">("dark");
+
+  useEffect(() => {
+    const stored = (typeof window !== "undefined" && localStorage.getItem("theme")) as
+      | "dark"
+      | "light"
+      | null;
+    const initial = stored ?? "dark";
+    setTheme(initial);
+    document.documentElement.classList.toggle("light", initial === "light");
+  }, []);
+
+  const toggleTheme = () => {
+    const next = theme === "dark" ? "light" : "dark";
+    setTheme(next);
+    document.documentElement.classList.toggle("light", next === "light");
+    try {
+      localStorage.setItem("theme", next);
+    } catch {}
+  };
 
   const scrollTo = (id: string) => {
     const element = document.getElementById(id);
@@ -45,13 +65,22 @@ export function Nav() {
           ))}
         </div>
 
-        <button
-          className="rounded-md p-2 text-muted-foreground hover:bg-accent hover:text-foreground md:hidden"
-          onClick={() => setOpen((prev) => !prev)}
-          aria-label={open ? "Close menu" : "Open menu"}
-        >
-          {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-        </button>
+        <div className="flex items-center gap-1">
+          <button
+            onClick={toggleTheme}
+            aria-label={theme === "dark" ? "Ativar tema claro" : "Ativar tema escuro"}
+            className="rounded-md p-2 text-muted-foreground transition-colors hover:bg-accent hover:text-orange-400"
+          >
+            {theme === "dark" ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
+          </button>
+          <button
+            className="rounded-md p-2 text-muted-foreground hover:bg-accent hover:text-foreground md:hidden"
+            onClick={() => setOpen((prev) => !prev)}
+            aria-label={open ? "Close menu" : "Open menu"}
+          >
+            {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          </button>
+        </div>
       </nav>
 
       {open && (
