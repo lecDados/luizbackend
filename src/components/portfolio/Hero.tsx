@@ -49,17 +49,51 @@ export function Hero() {
   return (
     <section id="hero" className="pb-20 pt-32 md:pb-28 md:pt-40">
       <div className="mx-auto max-w-[1200px] px-6">
-        <h1 className="text-4xl font-bold tracking-tight md:text-6xl">
-          Luiz Eduardo
-        </h1>
-        <p className="mt-2 text-lg font-medium text-orange-400 md:text-xl">
-          Backend Developer
-        </p>
-        <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground">
-          Backend developer focused on building scalable APIs, authentication
-          systems, databases, and clean software architecture.
-        </p>
+        <div className="max-w-2xl overflow-hidden rounded-xl border border-border bg-card shadow-card">
+          <div className="flex items-center gap-3 border-b border-border bg-secondary px-4 py-3">
+            <div className="flex items-center gap-2">
+              <span className="h-3 w-3 rounded-full bg-[#ff5f57]" aria-hidden />
+              <span className="h-3 w-3 rounded-full bg-[#febc2e]" aria-hidden />
+              <span className="h-3 w-3 rounded-full bg-[#28c840]" aria-hidden />
+            </div>
+            <span className="truncate font-mono text-xs text-muted-foreground">
+              luiz@portfolio: ~
+            </span>
+          </div>
+
+          <div className="p-5 font-mono text-sm md:p-6">
+            <p className="text-muted-foreground">
+              <span className="text-emerald-400">luiz@portfolio</span>
+              <span className="text-muted-foreground">:</span>
+              <span className="text-sky-400">~</span>$ whoami
+            </p>
+            <h1 className="mt-2 text-3xl font-bold tracking-tight md:text-5xl">
+              Luiz Eduardo
+            </h1>
+            <p className="mt-1 text-lg font-medium text-orange-400 md:text-xl">
+              Backend Developer
+            </p>
+
+            <p className="mt-6 text-muted-foreground">
+              <span className="text-emerald-400">luiz@portfolio</span>
+              <span className="text-muted-foreground">:</span>
+              <span className="text-sky-400">~</span>$ cat about.txt
+            </p>
+            <p className="mt-2 leading-relaxed text-muted-foreground">
+              Backend developer focused on building scalable APIs, authentication
+              systems, databases, and clean software architecture.
+            </p>
+
+            <p className="mt-6 text-muted-foreground">
+              <span className="text-emerald-400">luiz@portfolio</span>
+              <span className="text-muted-foreground">:</span>
+              <span className="text-sky-400">~</span>${" "}
+              <span className="inline-block h-4 w-2 translate-y-0.5 bg-orange-400" aria-hidden />
+            </p>
+          </div>
+        </div>
       </div>
+
 
       <div className="relative mt-12 w-full overflow-hidden border-y border-border py-8">
         <div className="flex flex-col gap-4">
