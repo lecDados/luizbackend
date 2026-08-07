@@ -48,13 +48,6 @@ export function Nav() {
 
         <div className="flex items-center gap-1">
           <button
-            onClick={toggleTheme}
-            aria-label={theme === "dark" ? "Ativar tema claro" : "Ativar tema escuro"}
-            className="rounded-md p-2 text-muted-foreground transition-colors hover:bg-accent hover:text-orange-400"
-          >
-            {theme === "dark" ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
-          </button>
-          <button
             className="rounded-md p-2 text-muted-foreground hover:bg-accent hover:text-foreground md:hidden"
             onClick={() => setOpen((prev) => !prev)}
             aria-label={open ? "Close menu" : "Open menu"}
