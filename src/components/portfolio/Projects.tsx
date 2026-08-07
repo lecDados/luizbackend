@@ -1,4 +1,4 @@
-import { Github, ExternalLink, Server, Layout, Star } from "lucide-react";
+import { Github, ExternalLink } from "lucide-react";
 import inventoryProject from "@/assets/inventory-project.jpg";
 import projetoPi from "@/assets/projeto-pi.jpg";
 import partyDecorWebsite from "@/assets/party-decor-website.jpg";
@@ -18,7 +18,6 @@ type Group = {
   title: string;
   windowTitle: string;
   subtitle: string;
-  icon: typeof Server;
   accent: string;
   accentBorder: string;
   accentBg: string;
@@ -32,7 +31,6 @@ const groups: Group[] = [
     title: "Back-end",
     windowTitle: "~/projects/backend",
     subtitle: "APIs, banco de dados e regras de negócio.",
-    icon: Server,
     accent: "text-sky-400",
     accentBorder: "border-sky-500/30",
     accentBg: "bg-sky-500/10",
@@ -60,7 +58,6 @@ const groups: Group[] = [
     title: "Front-end",
     windowTitle: "~/projects/frontend",
     subtitle: "Interfaces responsivas e experiência de uso.",
-    icon: Layout,
     accent: "text-violet-400",
     accentBorder: "border-violet-500/30",
     accentBg: "bg-violet-500/10",
@@ -89,7 +86,6 @@ const groups: Group[] = [
     title: "Projetos Reais e Participações",
     windowTitle: "~/projects/producao",
     subtitle: "Trabalhos entregues para clientes e projetos acadêmicos aplicados.",
-    icon: Star,
     accent: "text-orange-400",
     accentBorder: "border-orange-500/40",
     accentBg: "bg-orange-500/10",
@@ -127,7 +123,6 @@ function TrafficLights() {
 }
 
 function WindowCard({ group }: { group: Group }) {
-  const Icon = group.icon;
   return (
     <article
       className={`overflow-hidden rounded-xl border ${group.accentBorder} bg-card shadow-card ${
@@ -143,9 +138,6 @@ function WindowCard({ group }: { group: Group }) {
 
       <div className="p-5">
         <div className="flex items-start gap-3">
-          <span className={`rounded-md ${group.accentBg} p-2 ${group.accent}`}>
-            <Icon className="h-5 w-5" />
-          </span>
           <div>
             <h3 className={`text-lg font-semibold ${group.accent}`}>
               {group.title}
