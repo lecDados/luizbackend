@@ -1,15 +1,10 @@
 import { Github, ExternalLink } from "lucide-react";
-import inventoryProject from "@/assets/inventory-project.jpg";
-import projetoPi from "@/assets/projeto-pi.jpg";
-import partyDecorWebsite from "@/assets/party-decor-website.jpg";
-import btcDashboard from "@/assets/btc-dashboard.jpg";
 
 type Project = {
   name: string;
   description: string;
   repository: string;
   liveUrl?: string;
-  image: string;
   tags: string[];
 };
 
@@ -40,7 +35,6 @@ const groups: Group[] = [
         description:
           "Aplicação completa de controle de estoque com foco em organização, escalabilidade e persistência de dados, incluindo CRUD e gestão de produtos.",
         repository: "https://github.com/lecDados/controle_de_estoque",
-        image: inventoryProject,
         tags: ["Node.js", "Express", "MongoDB", "JavaScript"],
       },
       {
@@ -48,7 +42,6 @@ const groups: Group[] = [
         description:
           "Plataforma de acompanhamento do mercado de criptomoedas, consultando API em tempo real para altas, quedas e indicadores de investimento.",
         repository: "https://github.com/lecDados/painelDeInvestimentoBTC.git",
-        image: btcDashboard,
         tags: ["Node.js", "Express", "MongoDB", "JWT", "REST API"],
       },
     ],
@@ -68,7 +61,6 @@ const groups: Group[] = [
           "Landing page moderna com catálogo de serviços, galeria de fotos, formulário de orçamento e integração com WhatsApp.",
         repository: "https://github.com/lecDados/website-decoradora-festas",
         liveUrl: "https://github.com/lecDados/website-decoradora-festas",
-        image: partyDecorWebsite,
         tags: ["React", "Tailwind", "Responsivo", "SEO"],
       },
       {
@@ -76,7 +68,6 @@ const groups: Group[] = [
         description:
           "Construção de dashboards em React com visualização de dados em tempo real usando Chart.js e consumo de APIs via Axios.",
         repository: "https://github.com/lecDados/painelDeInvestimentoBTC.git",
-        image: btcDashboard,
         tags: ["React", "Chart.js", "Axios"],
       },
     ],
@@ -97,7 +88,6 @@ const groups: Group[] = [
           "Projeto real entregue para empresa de decoração de festas, com painel administrativo, autenticação e formulários salvos em MongoDB.",
         repository: "https://github.com/lecDados/website-decoradora-festas",
         liveUrl: "https://github.com/lecDados/website-decoradora-festas",
-        image: partyDecorWebsite,
         tags: ["React", "Node.js", "Express", "MongoDB", "JWT"],
       },
       {
@@ -105,7 +95,6 @@ const groups: Group[] = [
         description:
           "Projeto integrador full-stack com participação em equipe, focado em integração de API, autenticação e gestão de banco de dados.",
         repository: "https://github.com/lecDados/projetoPi",
-        image: projetoPi,
         tags: ["Full-stack", "API", "Autenticação", "Database"],
       },
     ],
@@ -125,8 +114,8 @@ function TrafficLights() {
 function WindowCard({ group }: { group: Group }) {
   return (
     <article
-      className={`overflow-hidden rounded-xl border ${group.accentBorder} bg-card shadow-card ${
-        group.featured ? "lg:col-span-2 ring-1 ring-orange-500/20" : ""
+      className={`flex h-full flex-col overflow-hidden rounded-xl border ${group.accentBorder} bg-card shadow-card ${
+        group.featured ? "ring-1 ring-orange-500/20" : ""
       }`}
     >
       <div className="flex items-center gap-3 border-b border-border bg-secondary px-4 py-3">
@@ -136,9 +125,9 @@ function WindowCard({ group }: { group: Group }) {
         </span>
       </div>
 
-      <div className="p-5">
+      <div className="flex flex-1 flex-col p-5">
         <div className="flex items-start gap-3">
-          <div>
+          <div className="min-w-0">
             <h3 className={`text-lg font-semibold ${group.accent}`}>
               {group.title}
             </h3>
@@ -151,23 +140,14 @@ function WindowCard({ group }: { group: Group }) {
           )}
         </div>
 
-        <div
-          className={`mt-5 grid gap-4 ${group.featured ? "md:grid-cols-2" : "grid-cols-1"}`}
-        >
+        <div className="mt-5 grid gap-4">
           {group.projects.map((project) => (
             <div
               key={`${group.id}-${project.name}`}
               className="rounded-lg border border-border bg-background p-4"
             >
-              <img
-                src={project.image}
-                alt={project.name}
-                width={1024}
-                height={576}
-                loading="lazy"
-                className="aspect-video w-full rounded-md object-cover"
-              />
-              <h4 className="mt-4 text-base font-semibold text-card-foreground">
+              <h4 className="text-base font-semibold text-card-foreground">
+
                 {project.name}
               </h4>
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
@@ -225,7 +205,7 @@ export function Projects() {
           Backend, front-end e projetos reais.
         </p>
 
-        <div className="mt-10 grid gap-6 lg:grid-cols-2">
+        <div className="mt-10 grid items-start gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {groups.map((group) => (
             <WindowCard key={group.id} group={group} />
           ))}
