@@ -1,15 +1,10 @@
 import { Github, ExternalLink } from "lucide-react";
-import inventoryProject from "@/assets/inventory-project.jpg";
-import projetoPi from "@/assets/projeto-pi.jpg";
-import partyDecorWebsite from "@/assets/party-decor-website.jpg";
-import btcDashboard from "@/assets/btc-dashboard.jpg";
 
 type Project = {
   name: string;
   description: string;
   repository: string;
   liveUrl?: string;
-  image: string;
   tags: string[];
 };
 
@@ -40,7 +35,6 @@ const groups: Group[] = [
         description:
           "Aplicação completa de controle de estoque com foco em organização, escalabilidade e persistência de dados, incluindo CRUD e gestão de produtos.",
         repository: "https://github.com/lecDados/controle_de_estoque",
-        image: inventoryProject,
         tags: ["Node.js", "Express", "MongoDB", "JavaScript"],
       },
       {
@@ -48,7 +42,6 @@ const groups: Group[] = [
         description:
           "Plataforma de acompanhamento do mercado de criptomoedas, consultando API em tempo real para altas, quedas e indicadores de investimento.",
         repository: "https://github.com/lecDados/painelDeInvestimentoBTC.git",
-        image: btcDashboard,
         tags: ["Node.js", "Express", "MongoDB", "JWT", "REST API"],
       },
     ],
@@ -68,7 +61,6 @@ const groups: Group[] = [
           "Landing page moderna com catálogo de serviços, galeria de fotos, formulário de orçamento e integração com WhatsApp.",
         repository: "https://github.com/lecDados/website-decoradora-festas",
         liveUrl: "https://github.com/lecDados/website-decoradora-festas",
-        image: partyDecorWebsite,
         tags: ["React", "Tailwind", "Responsivo", "SEO"],
       },
       {
@@ -76,7 +68,6 @@ const groups: Group[] = [
         description:
           "Construção de dashboards em React com visualização de dados em tempo real usando Chart.js e consumo de APIs via Axios.",
         repository: "https://github.com/lecDados/painelDeInvestimentoBTC.git",
-        image: btcDashboard,
         tags: ["React", "Chart.js", "Axios"],
       },
     ],
@@ -97,7 +88,6 @@ const groups: Group[] = [
           "Projeto real entregue para empresa de decoração de festas, com painel administrativo, autenticação e formulários salvos em MongoDB.",
         repository: "https://github.com/lecDados/website-decoradora-festas",
         liveUrl: "https://github.com/lecDados/website-decoradora-festas",
-        image: partyDecorWebsite,
         tags: ["React", "Node.js", "Express", "MongoDB", "JWT"],
       },
       {
@@ -105,7 +95,6 @@ const groups: Group[] = [
         description:
           "Projeto integrador full-stack com participação em equipe, focado em integração de API, autenticação e gestão de banco de dados.",
         repository: "https://github.com/lecDados/projetoPi",
-        image: projetoPi,
         tags: ["Full-stack", "API", "Autenticação", "Database"],
       },
     ],
