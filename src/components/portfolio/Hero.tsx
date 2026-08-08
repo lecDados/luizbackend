@@ -45,9 +45,13 @@ const rows = [
   },
 ];
 
+import { HeroIntro } from "./HeroIntro";
+
 export function Hero() {
   return (
-    <section id="hero" className="pb-20 pt-32 md:pb-28 md:pt-40">
+    <>
+    <HeroIntro />
+    <section id="hero" className="pb-20 pt-16 md:pb-28 md:pt-20">
       <div className="mx-auto max-w-[1200px] px-6">
         <div className="max-w-2xl overflow-hidden rounded-xl border border-border bg-card shadow-card">
           <div className="flex items-center gap-3 border-b border-border bg-secondary px-4 py-3">
