@@ -71,7 +71,7 @@ export function Coverflow() {
               type="button"
               onClick={() => setActive(i)}
               aria-label={slide.alt}
-              className="absolute left-1/2 top-1/2 aspect-square w-[200px] -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-2xl border border-border bg-card sm:w-[260px] md:w-[380px]"
+              className="absolute left-1/2 top-1/2 aspect-square w-[200px] overflow-hidden rounded-2xl border border-border bg-card sm:w-[260px] md:w-[380px]"
               style={{ transformStyle: "preserve-3d", zIndex: 10 - abs }}
               animate={{
                 x: `calc(-50% + ${x}%)`,
