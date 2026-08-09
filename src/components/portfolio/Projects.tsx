@@ -1,3 +1,5 @@
+import { Coverflow } from "./Coverflow";
+
 type Group = {
   id: string;
   title: string;
