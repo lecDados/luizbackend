@@ -55,7 +55,7 @@ export function Coverflow() {
         touchStart.current = null;
       }}
     >
-      <div className="relative h-[260px] w-full sm:h-[320px] md:h-[420px]">
+      <div className="relative mx-auto h-[260px] w-full max-w-full overflow-hidden sm:h-[320px] md:h-[420px]">
         {slides.map((slide, i) => {
           const d = offsetOf(i);
           const abs = Math.abs(d);
