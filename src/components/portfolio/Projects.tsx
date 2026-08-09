@@ -125,7 +125,28 @@ export function Projects() {
             <WindowCard key={group.id} group={group} />
           ))}
         </div>
+
+        <article className="mt-6 overflow-hidden rounded-xl border border-border bg-card shadow-card">
+          <div className="flex items-center gap-3 border-b border-border bg-secondary px-4 py-3">
+            <TrafficLights />
+            <span className="truncate font-mono text-xs text-muted-foreground">
+              ~/projects/galeria
+            </span>
+          </div>
+          <div className="p-5">
+            <h3 className="font-mono text-lg font-semibold text-orange-400">
+              Galeria
+            </h3>
+            <p className="mt-1 font-mono text-xs text-muted-foreground">
+              {"// "}Prévias visuais dos projetos.
+            </p>
+            <div className="mt-6">
+              <Coverflow />
+            </div>
+          </div>
+        </article>
       </div>
     </section>
   );
 }
+
