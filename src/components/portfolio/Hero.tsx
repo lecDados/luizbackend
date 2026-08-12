@@ -1,3 +1,6 @@
+import { Linkedin } from "lucide-react";
+import profilePhoto from "@/assets/profile-luiz.jpg";
+
 const rows = [
   {
     direction: "left" as const,
