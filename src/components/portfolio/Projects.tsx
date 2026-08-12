@@ -1,4 +1,4 @@
-import { Github } from "lucide-react";
+import { Code2 } from "lucide-react";
 import { Coverflow } from "./Coverflow";
 
 type Group = {
@@ -111,9 +111,9 @@ function WindowCard({ group }: { group: Group }) {
           href="https://github.com/lecDados"
           target="_blank"
           rel="noopener noreferrer"
-          className={`mt-5 inline-flex items-center gap-2 self-start rounded-lg ${group.accentBg} px-4 py-2 font-mono text-xs font-semibold ${group.accent} shadow-sm ring-1 ring-inset ${group.accentBorder} transition-all hover:brightness-110 hover:shadow-md active:scale-[0.98]`}
+          className="mt-5 inline-flex items-center gap-2 self-start rounded-lg bg-emerald-500/10 px-4 py-2 font-sans text-xs font-semibold text-emerald-400 shadow-sm ring-1 ring-inset ring-emerald-500/30 transition-all hover:brightness-110 hover:shadow-md active:scale-[0.98]"
         >
-          <Github className="h-4 w-4" />
+          <Code2 className="h-4 w-4" />
           @lecDados
         </a>
       </div>
