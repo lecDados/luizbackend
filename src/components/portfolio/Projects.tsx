@@ -106,6 +106,16 @@ function WindowCard({ group }: { group: Group }) {
             </span>
           ))}
         </div>
+
+        <a
+          href="https://github.com/lecDados"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={`mt-5 inline-flex items-center gap-2 self-start rounded-md border ${group.accentBorder} ${group.accentBg} px-3 py-1.5 font-mono text-xs font-medium ${group.accent} transition-colors hover:bg-card-foreground/5`}
+        >
+          <Github className="h-3.5 w-3.5" />
+          @lecDados
+        </a>
       </div>
     </article>
   );
