@@ -97,47 +97,44 @@ export function Hero() {
               <span className="text-sky-400">~</span>${" "}
               <span className="inline-block h-4 w-2 translate-y-0.5 bg-orange-400" aria-hidden />
             </p>
+
+            <a
+              href="https://www.linkedin.com/in/luiz-eduardo-4a6207384/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group mt-8 block overflow-hidden rounded-xl border border-[#e8e8e8] bg-white font-sans shadow-card transition-transform duration-300 hover:-translate-y-1"
+            >
+              <div className="relative h-24 bg-gradient-to-r from-[#0a66c2]/10 to-[#0a66c2]/5" />
+              <div className="relative px-5 pb-5">
+                <div className="-mt-12 mb-3 inline-block overflow-hidden rounded-full border-4 border-white shadow-md">
+                  <img
+                    src={profilePhoto}
+                    alt="Luiz Eduardo"
+                    width={96}
+                    height={96}
+                    className="h-24 w-24 object-cover"
+                  />
+                </div>
+                <div className="flex flex-col gap-1 sm:flex-row sm:items-start sm:justify-between">
+                  <div>
+                    <h3 className="text-xl font-bold text-[#191919]">Luiz Eduardo</h3>
+                    <p className="text-sm font-medium text-[#0a66c2]">
+                      Desenvolvedor Back-end | Node.js · APIs · Banco de Dados
+                    </p>
+                    <p className="mt-2 text-sm leading-relaxed text-[#666666]">
+                      Construo APIs escaláveis, sistemas de autenticação e arquitetura limpa.
+                      Aberto a conexões, colaborações e oportunidades que unam código e impacto.
+                    </p>
+                  </div>
+                  <span className="mt-3 inline-flex items-center justify-center gap-2 rounded-full bg-[#0a66c2] px-5 py-2 text-sm font-semibold text-white shadow-sm transition-colors group-hover:bg-[#004182] sm:mt-0 sm:shrink-0">
+                    <Linkedin className="h-4 w-4" />
+                    Ver perfil no LinkedIn
+                  </span>
+                </div>
+              </div>
+            </a>
           </div>
         </div>
-      </div>
-
-
-      <div className="mx-auto mt-12 max-w-[1200px] px-6">
-        <a
-          href="https://www.linkedin.com/in/luiz-eduardo-4a6207384/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="group block overflow-hidden rounded-xl border border-[#e8e8e8] bg-white shadow-card transition-transform duration-300 hover:-translate-y-1"
-        >
-          <div className="relative h-24 bg-gradient-to-r from-[#0a66c2]/10 to-[#0a66c2]/5" />
-          <div className="relative px-5 pb-5">
-            <div className="-mt-12 mb-3 inline-block overflow-hidden rounded-full border-4 border-white shadow-md">
-              <img
-                src={profilePhoto}
-                alt="Luiz Eduardo"
-                width={96}
-                height={96}
-                className="h-24 w-24 object-cover"
-              />
-            </div>
-            <div className="flex flex-col gap-1 sm:flex-row sm:items-start sm:justify-between">
-              <div>
-                <h3 className="text-xl font-bold text-[#191919]">Luiz Eduardo</h3>
-                <p className="text-sm font-medium text-[#0a66c2]">
-                  Desenvolvedor Back-end | Node.js · APIs · Banco de Dados
-                </p>
-                <p className="mt-2 text-sm leading-relaxed text-[#666666]">
-                  Construo APIs escaláveis, sistemas de autenticação e arquitetura limpa.
-                  Aberto a conexões, colaborações e oportunidades que unam código e impacto.
-                </p>
-              </div>
-              <span className="mt-3 inline-flex items-center justify-center gap-2 rounded-full bg-[#0a66c2] px-5 py-2 text-sm font-semibold text-white shadow-sm transition-colors group-hover:bg-[#004182] sm:mt-0 sm:shrink-0">
-                <Linkedin className="h-4 w-4" />
-                Ver perfil no LinkedIn
-              </span>
-            </div>
-          </div>
-        </a>
       </div>
 
       <div className="relative mt-12 w-full overflow-hidden border-y border-border py-8 blur-[2px]">
