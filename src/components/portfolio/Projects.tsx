@@ -1,3 +1,4 @@
+import { Github } from "lucide-react";
 import { Coverflow } from "./Coverflow";
 
 type Group = {
