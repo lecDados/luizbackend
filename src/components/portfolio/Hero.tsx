@@ -142,6 +142,45 @@ export function Hero() {
           ))}
         </div>
       </div>
+
+        <div className="pointer-events-none absolute inset-0 flex items-center justify-center px-6">
+          <a
+            href="https://www.linkedin.com/in/luiz-eduardo-4a6207384/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group pointer-events-auto w-full max-w-xl overflow-hidden rounded-xl border border-border bg-card font-sans shadow-card transition-transform duration-300 hover:-translate-y-1"
+          >
+            <div className="h-20 bg-secondary" />
+            <div className="relative px-5 pb-5">
+              <div className="-mt-10 mb-3 inline-block overflow-hidden rounded-full border-4 border-card shadow-md">
+                <img
+                  src={profilePhoto}
+                  alt="Luiz Eduardo"
+                  width={80}
+                  height={80}
+                  className="h-20 w-20 object-cover"
+                />
+              </div>
+              <div className="flex flex-col gap-1 sm:flex-row sm:items-start sm:justify-between">
+                <div>
+                  <h3 className="text-xl font-bold text-foreground">Luiz Eduardo</h3>
+                  <p className="text-sm font-medium text-sky-400">
+                    Desenvolvedor Back-end | Node.js · APIs · Banco de Dados
+                  </p>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                    Construo APIs escaláveis, sistemas de autenticação e arquitetura limpa.
+                    Aberto a conexões, colaborações e oportunidades que unam código e impacto.
+                  </p>
+                </div>
+                <span className="mt-3 inline-flex items-center justify-center gap-2 rounded-full bg-sky-500/15 px-5 py-2 text-sm font-semibold text-sky-400 transition-colors group-hover:bg-sky-500/25 sm:mt-0 sm:shrink-0">
+                  <Linkedin className="h-4 w-4" />
+                  Ver perfil no LinkedIn
+                </span>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
     </section>
     </>
   );
