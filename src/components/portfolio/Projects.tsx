@@ -76,7 +76,13 @@ function TrafficLights() {
   );
 }
 
-function WindowCard({ group }: { group: Group }) {
+function WindowCard({
+  group,
+  carousel,
+}: {
+  group: Group;
+  carousel?: Slide[];
+}) {
   return (
     <article
       className={`flex h-full flex-col overflow-hidden rounded-xl border ${group.accentBorder} bg-card shadow-card ${
@@ -96,10 +102,12 @@ function WindowCard({ group }: { group: Group }) {
             <h3 className={`font-mono text-lg font-semibold ${group.accent}`}>
               {group.title}
             </h3>
-            <p className="mt-1 font-mono text-xs text-muted-foreground">
-              {"// "}
-              {group.subtitle}
-            </p>
+            {!carousel && (
+              <p className="mt-1 font-mono text-xs text-muted-foreground">
+                {"// "}
+                {group.subtitle}
+              </p>
+            )}
           </div>
           {group.featured && (
             <span className="ml-auto shrink-0 rounded-md border border-orange-500/40 bg-orange-500/10 px-2 py-1 text-[11px] font-medium text-orange-400">
@@ -108,16 +116,22 @@ function WindowCard({ group }: { group: Group }) {
           )}
         </div>
 
-        <div className="mt-5 flex flex-wrap gap-2">
-          {group.tags.map((tag) => (
-            <span
-              key={tag}
-              className={`rounded-md border ${group.accentBorder} ${group.accentBg} px-2.5 py-1 font-mono text-[11px] ${group.accent}`}
-            >
-              {tag}
-            </span>
-          ))}
-        </div>
+        {carousel ? (
+          <div className="mt-4 -mx-2">
+            <MiniCoverflow slides={carousel} />
+          </div>
+        ) : (
+          <div className="mt-5 flex flex-wrap gap-2">
+            {group.tags.map((tag) => (
+              <span
+                key={tag}
+                className={`rounded-md border ${group.accentBorder} ${group.accentBg} px-2.5 py-1 font-mono text-[11px] ${group.accent}`}
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
+        )}
 
         <a
           href="https://github.com/lecDados"
