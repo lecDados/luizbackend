@@ -1,5 +1,4 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Nav } from "@/components/portfolio/Nav";
 import { Hero } from "@/components/portfolio/Hero";
 import { Projects } from "@/components/portfolio/Projects";
 import { Skills } from "@/components/portfolio/Skills";
@@ -36,7 +35,6 @@ function Portfolio() {
   return (
     <div className="relative min-h-screen bg-background text-foreground">
       <CodeBackground />
-      <Nav />
       <main>
         <Hero />
         <Projects />
