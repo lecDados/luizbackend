@@ -161,7 +161,11 @@ export function Projects() {
 
         <div className="mt-10 grid items-start gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {groups.map((group) => (
-            <WindowCard key={group.id} group={group} />
+            <WindowCard
+              key={group.id}
+              group={group}
+              carousel={group.id === "real" ? realSlides : undefined}
+            />
           ))}
         </div>
 
