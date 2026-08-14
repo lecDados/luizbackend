@@ -1,5 +1,11 @@
 import { Github } from "lucide-react";
 import { Coverflow } from "./Coverflow";
+import { MiniCoverflow } from "./MiniCoverflow";
+import party from "@/assets/party-decor-website.jpg";
+import oficina from "@/assets/oficina-moto.jpg";
+import planilhas from "@/assets/automacao-planilhas.jpg";
+
+type Slide = { src: string; alt: string };
 
 type Group = {
   id: string;
@@ -12,6 +18,12 @@ type Group = {
   featured?: boolean;
   tags: string[];
 };
+
+const realSlides: Slide[] = [
+  { src: party, alt: "Site para Decoradora de Festas" },
+  { src: oficina, alt: "Sistema para Oficina de Moto" },
+  { src: planilhas, alt: "Automação de Planilhas" },
+];
 
 const groups: Group[] = [
   {
