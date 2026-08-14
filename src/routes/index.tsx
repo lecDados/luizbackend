@@ -35,7 +35,6 @@ function Portfolio() {
   return (
     <div className="relative min-h-screen bg-background text-foreground">
       <CodeBackground />
-      <Nav />
       <main>
         <Hero />
         <Projects />
