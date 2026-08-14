@@ -102,8 +102,8 @@ export function Hero() {
         </div>
       </div>
 
-
-      <div className="relative mt-12 w-full overflow-hidden border-y border-border py-8 blur-[2px]">
+      <div className="relative mt-12">
+      <div className="relative w-full overflow-hidden border-y border-border py-8 blur-[2px]">
         <div className="flex flex-col gap-4">
           {rows.map((row, rowIndex) => (
             <div key={rowIndex} className="relative flex overflow-hidden">
