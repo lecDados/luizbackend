@@ -52,12 +52,12 @@ const rows = [
   },
 ];
 
-import { CheatSheet } from "./CheatSheet";
+import { HeroIntro } from "./HeroIntro";
 
 export function Hero() {
   return (
     <>
-    <CheatSheet />
+    <HeroIntro />
     <section id="hero" className="pb-20 pt-16 md:pb-28 md:pt-20">
       <div className="mx-auto flex max-w-[1200px] flex-col items-center gap-10 px-6 lg:flex-row lg:items-center lg:justify-center">
         <div className="w-full max-w-2xl overflow-hidden rounded-xl border border-border bg-card shadow-card">
