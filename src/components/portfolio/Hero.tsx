@@ -1,5 +1,9 @@
 import { Linkedin } from "lucide-react";
 import profilePhoto from "@/assets/profile-luiz.jpg";
+import claudeLogo from "@/assets/claude-code-logo.png";
+import figmaLogo from "@/assets/figma-logo.png";
+import lovableLogo from "@/assets/lovable-logo.png";
+import awsLogo from "@/assets/aws-logo.png";
 
 const rows = [
   {
@@ -55,8 +59,8 @@ export function Hero() {
     <>
     <HeroIntro />
     <section id="hero" className="pb-20 pt-16 md:pb-28 md:pt-20">
-      <div className="mx-auto max-w-[1200px] px-6">
-        <div className="max-w-2xl overflow-hidden rounded-xl border border-border bg-card shadow-card">
+      <div className="mx-auto flex max-w-[1200px] flex-col items-center gap-10 px-6 lg:flex-row lg:items-center lg:justify-center">
+        <div className="w-full max-w-2xl overflow-hidden rounded-xl border border-border bg-card shadow-card">
           <div className="flex items-center gap-3 border-b border-border bg-secondary px-4 py-3">
             <div className="flex items-center gap-2">
               <span className="h-3 w-3 rounded-full bg-[#ff5f57]" aria-hidden />
@@ -98,6 +102,26 @@ export function Hero() {
               <span className="inline-block h-4 w-2 translate-y-0.5 bg-orange-400" aria-hidden />
             </p>
 
+          </div>
+        </div>
+
+        {/* Tech orbit cluster */}
+        <div className="relative h-72 w-72 shrink-0">
+          {/* AWS - top behind */}
+          <div className="absolute left-1/2 top-1/2 z-10 h-24 w-24 -translate-x-1/2 -translate-y-1/2 -mt-[81px] overflow-hidden rounded-full border-2 border-border bg-card shadow-card">
+            <img src={awsLogo} alt="AWS" className="h-full w-full object-cover" />
+          </div>
+          {/* Figma - left behind */}
+          <div className="absolute left-1/2 top-1/2 z-20 h-24 w-24 -translate-x-1/2 -translate-y-1/2 -ml-[81px] overflow-hidden rounded-full border-2 border-border bg-card shadow-card">
+            <img src={figmaLogo} alt="Figma" className="h-full w-full object-cover" />
+          </div>
+          {/* Lovable - right behind */}
+          <div className="absolute left-1/2 top-1/2 z-20 h-24 w-24 -translate-x-1/2 -translate-y-1/2 ml-[81px] overflow-hidden rounded-full border-2 border-border bg-card shadow-card">
+            <img src={lovableLogo} alt="Lovable" className="h-full w-full object-cover" />
+          </div>
+          {/* Claude Code - center front */}
+          <div className="absolute left-1/2 top-1/2 z-30 h-24 w-24 -translate-x-1/2 -translate-y-1/2 mt-[81px] overflow-hidden rounded-full border-2 border-border bg-card shadow-card">
+            <img src={claudeLogo} alt="Claude Code" className="h-full w-full object-cover" />
           </div>
         </div>
       </div>
