@@ -1,5 +1,5 @@
 import { Github } from "lucide-react";
-import { Coverflow } from "./Coverflow";
+
 import { MiniCoverflow } from "./MiniCoverflow";
 import party from "@/assets/party-decor-website.jpg";
 import oficina from "@/assets/oficina-moto.jpg";
