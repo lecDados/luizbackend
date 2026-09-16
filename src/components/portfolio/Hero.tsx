@@ -105,23 +105,32 @@ export function Hero() {
           </div>
         </div>
 
-        {/* Tech orbit cluster */}
-        <div className="relative h-72 w-72 shrink-0">
-          {/* AWS - top behind */}
-          <div className="absolute left-1/2 top-1/2 z-10 h-24 w-24 -translate-x-1/2 -translate-y-1/2 -mt-[81px] overflow-hidden rounded-full border-2 border-border bg-card shadow-card">
-            <img src={awsLogo} alt="AWS" className="h-full w-full object-cover" />
-          </div>
-          {/* Figma - left behind */}
-          <div className="absolute left-1/2 top-1/2 z-20 h-24 w-24 -translate-x-1/2 -translate-y-1/2 -ml-[81px] overflow-hidden rounded-full border-2 border-border bg-card shadow-card">
-            <img src={figmaLogo} alt="Figma" className="h-full w-full object-cover" />
-          </div>
-          {/* Lovable - right behind */}
-          <div className="absolute left-1/2 top-1/2 z-20 h-24 w-24 -translate-x-1/2 -translate-y-1/2 ml-[81px] overflow-hidden rounded-full border-2 border-border bg-card shadow-card">
-            <img src={lovableLogo} alt="Lovable" className="h-full w-full object-cover" />
-          </div>
-          {/* Claude Code - center front */}
-          <div className="absolute left-1/2 top-1/2 z-30 h-24 w-24 -translate-x-1/2 -translate-y-1/2 mt-[81px] overflow-hidden rounded-full border-2 border-border bg-card shadow-card">
-            <img src={claudeLogo} alt="Claude Code" className="h-full w-full object-cover" />
+        {/* Tools heading + orbit cluster */}
+        <div className="flex w-72 shrink-0 flex-col items-center">
+          <h2 className="text-center text-lg font-semibold tracking-tight text-foreground">
+            Ferramentas principais
+          </h2>
+          <p className="mt-2 text-center text-sm text-muted-foreground">
+            Do design ao deploy, construindo soluções modernas e rápidas para
+            qualquer tipo de negócio.
+          </p>
+          <div className="relative mt-6 h-72 w-72">
+            {/* AWS - top behind */}
+            <div className="absolute left-1/2 top-1/2 z-10 h-24 w-24 -translate-x-1/2 -translate-y-1/2 -mt-[81px] overflow-hidden rounded-full border-2 border-border bg-card shadow-card">
+              <img src={awsLogo} alt="AWS" className="h-full w-full object-cover" />
+            </div>
+            {/* Figma - left behind */}
+            <div className="absolute left-1/2 top-1/2 z-20 h-24 w-24 -translate-x-1/2 -translate-y-1/2 -ml-[81px] overflow-hidden rounded-full border-2 border-border bg-card shadow-card">
+              <img src={figmaLogo} alt="Figma" className="h-full w-full object-cover" />
+            </div>
+            {/* Lovable - right behind */}
+            <div className="absolute left-1/2 top-1/2 z-20 h-24 w-24 -translate-x-1/2 -translate-y-1/2 ml-[81px] overflow-hidden rounded-full border-2 border-border bg-card shadow-card">
+              <img src={lovableLogo} alt="Lovable" className="h-full w-full object-cover" />
+            </div>
+            {/* Claude Code - center front */}
+            <div className="absolute left-1/2 top-1/2 z-30 h-24 w-24 -translate-x-1/2 -translate-y-1/2 mt-[81px] overflow-hidden rounded-full border-2 border-border bg-card shadow-card">
+              <img src={claudeLogo} alt="Claude Code" className="h-full w-full object-cover" />
+            </div>
           </div>
         </div>
       </div>
