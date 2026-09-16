@@ -29,8 +29,8 @@ export function HeroIntro() {
   }, []);
 
   return (
-    <section className="w-full border-b border-border pt-28 pb-16 md:pt-32 md:pb-24">
-      <div className="mx-auto max-w-[1200px] px-6">
+    <section className="w-full border-b border-border pt-28 pb-16 md:pt-16 md:pb-16 md:min-h-screen md:flex md:flex-col md:justify-center">
+      <div className="mx-auto w-full max-w-[1200px] px-6">
         <p className="font-mono text-xs uppercase tracking-[0.3em] text-orange-400">
           Backend &amp; Automação
         </p>
