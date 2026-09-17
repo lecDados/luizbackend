@@ -73,7 +73,7 @@ export function HeroIntro() {
           </a>
         </div>
 
-        <dl className="mt-12 grid max-w-3xl grid-cols-1 gap-6 sm:grid-cols-3">
+        <dl className="mt-12 hidden grid-cols-1 gap-6 sm:grid-cols-3 md:grid">
           {[
             { k: "APIs & Backend", v: "Node.js, Express, MongoDB, MySQL" },
             { k: "Automação", v: "Integrações, rotinas e webhooks" },
