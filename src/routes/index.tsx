@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Hero } from "@/components/portfolio/Hero";
+import { Services } from "@/components/portfolio/Services";
 
 import { Projects } from "@/components/portfolio/Projects";
 import { Skills } from "@/components/portfolio/Skills";
@@ -38,6 +39,7 @@ function Portfolio() {
       <CodeBackground />
       <main>
         <Hero />
+        <Services />
         <Projects />
         <Skills />
         <Books />
