@@ -78,7 +78,7 @@ function CardCarousel({ images, title }: { images: string[]; title: string }) {
       </button>
       <button
         type="button"
-onClick={next}
+        onClick={next}
         aria-label="Próxima imagem"
         className="absolute right-2 top-1/2 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-full border border-border bg-background/80 text-muted-foreground shadow-card backdrop-blur-sm transition-colors hover:bg-secondary hover:text-foreground"
       >
