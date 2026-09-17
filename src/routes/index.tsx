@@ -39,6 +39,7 @@ function Portfolio() {
       <CodeBackground />
       <main>
         <Hero />
+        <Services />
         <Projects />
         <Skills />
         <Books />
