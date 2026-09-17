@@ -44,7 +44,7 @@ export function Services() {
         </h2>
         <div className="mt-3 h-1 w-12 rounded-full bg-orange-500/70" />
         <p className="mt-4 text-muted-foreground">
-          Soluções que desenvolvimento para automatizar e escalar negócios.
+          Soluções que desenvolvo para automatizar e escalar negócios.
         </p>
 
         <ul className="mt-10 grid grid-cols-4 gap-3 md:gap-4">
