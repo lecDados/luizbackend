@@ -1,5 +1,3 @@
-import { Linkedin } from "lucide-react";
-import profilePhoto from "@/assets/profile-luiz.jpg";
 import claudeLogo from "@/assets/claude-code-logo.png";
 import figmaLogo from "@/assets/figma-logo.png";
 import lovableLogo from "@/assets/lovable-logo.png";
@@ -176,43 +174,6 @@ export function Hero() {
         </div>
       </div>
 
-        <div className="pointer-events-none absolute inset-0 flex items-center justify-center px-6">
-          <a
-            href="https://www.linkedin.com/in/luiz-eduardo-4a6207384/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group pointer-events-auto w-full max-w-sm overflow-hidden rounded-xl border border-border bg-card font-sans shadow-card transition-transform duration-300 hover:-translate-y-1"
-          >
-            <div className="h-12 bg-secondary" />
-            <div className="relative px-4 pb-4">
-              <div className="-mt-7 mb-2 inline-block overflow-hidden rounded-full border-4 border-card shadow-md">
-                <img
-                  src={profilePhoto}
-                  alt="Luiz Eduardo"
-                  width={56}
-                  height={56}
-                  className="h-14 w-14 object-cover"
-                />
-              </div>
-              <div className="flex flex-col gap-1 sm:flex-row sm:items-start sm:justify-between">
-                <div>
-                  <h3 className="text-base font-bold text-foreground">Luiz Eduardo</h3>
-                  <p className="text-xs font-medium text-sky-400">
-                    Desenvolvedor Back-end | Node.js · APIs · Banco de Dados
-                  </p>
-                  <p className="mt-1.5 text-xs leading-relaxed text-muted-foreground">
-                    Construo APIs escaláveis, sistemas de autenticação e arquitetura limpa.
-                    Aberto a conexões e colaborações.
-                  </p>
-                </div>
-                <span className="mt-2 inline-flex items-center justify-center gap-1.5 rounded-full bg-sky-500/15 px-3 py-1.5 text-xs font-semibold text-sky-400 transition-colors group-hover:bg-sky-500/25 sm:mt-0 sm:shrink-0">
-                  <Linkedin className="h-3 w-3" />
-                  Ver perfil
-                </span>
-              </div>
-            </div>
-          </a>
-        </div>
       </div>
     </section>
     </>
