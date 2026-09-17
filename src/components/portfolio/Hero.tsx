@@ -1,5 +1,3 @@
-import { Linkedin } from "lucide-react";
-import profilePhoto from "@/assets/profile-luiz.jpg";
 import claudeLogo from "@/assets/claude-code-logo.png";
 import figmaLogo from "@/assets/figma-logo.png";
 import lovableLogo from "@/assets/lovable-logo.png";
