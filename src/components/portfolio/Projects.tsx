@@ -12,6 +12,7 @@ import projectApi3 from "@/assets/project-api-3.jpg";
 
 const projects = [
   {
+    category: "Back-end",
     images: [projectBtc, projectBtc2, projectBtc3],
     title: "Painel de Investimento em BTC",
     subtitle: "Dashboard financeiro",
@@ -20,6 +21,7 @@ const projects = [
     tags: ["Node.js", "Express", "MySQL"],
   },
   {
+    category: "Front-end",
     images: [projectDecoradora, projectDecoradora2, projectDecoradora3],
     title: "Website para Decoradora de Festas",
     subtitle: "Landing page",
@@ -28,6 +30,8 @@ const projects = [
     tags: ["HTML 5", "CSS 3", "JavaScript"],
   },
   {
+    category: "Projetos em produção",
+    online: true,
     images: [projectApi, projectApi2, projectApi3],
     title: "API de Autenticação",
     subtitle: "Serviço back-end",
@@ -114,36 +118,50 @@ export function Projects() {
           Alguns dos projetos que desenvolvi.
         </p>
 
-        <div className="mt-10 flex flex-col gap-6">
+        <div className="mt-10 flex flex-col gap-10">
           {projects.map((project) => (
-            <article
-              key={project.title}
-              className="flex flex-col overflow-hidden rounded-xl border border-border bg-card shadow-card transition-transform duration-300 hover:-translate-y-1 sm:flex-row"
-            >
-              <CardCarousel images={project.images} title={project.title} />
-
-              <div className="flex flex-col justify-center gap-2 p-6">
-                <h3 className="text-lg font-semibold text-card-foreground">
-                  {project.title}
+            <div key={project.title}>
+              <div className="mb-3 flex items-center gap-3">
+                <h3 className="text-sm font-semibold uppercase tracking-widest text-muted-foreground">
+                  {project.category}
                 </h3>
-                <p className="text-sm font-medium text-orange-400">
-                  {project.subtitle}
-                </p>
-                <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
-                  {project.description}
-                </p>
-                <ul className="mt-2 flex flex-wrap gap-2">
-                  {project.tags.map((tag) => (
-                    <li
-                      key={tag}
-                      className="rounded-full border border-border bg-secondary px-3 py-1 text-xs font-medium text-muted-foreground"
-                    >
-                      {tag}
-                    </li>
-                  ))}
-                </ul>
+                <div className="h-px flex-1 bg-border" />
+                {project.online && (
+                  <span className="flex items-center gap-1.5 rounded-full border border-border bg-secondary px-2.5 py-0.5 text-xs font-medium text-muted-foreground">
+                    <span className="relative flex h-2 w-2">
+                      <span className="absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-60" />
+                      <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
+                    </span>
+                    Online
+                  </span>
+                )}
               </div>
-            </article>
+              <article className="flex flex-col overflow-hidden rounded-xl border border-border bg-card shadow-card transition-transform duration-300 hover:-translate-y-1 sm:flex-row">
+                <CardCarousel images={project.images} title={project.title} />
+
+                <div className="flex flex-col justify-center gap-2 p-6">
+                  <h4 className="text-lg font-semibold text-card-foreground">
+                    {project.title}
+                  </h4>
+                  <p className="text-sm font-medium text-orange-400">
+                    {project.subtitle}
+                  </p>
+                  <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
+                    {project.description}
+                  </p>
+                  <ul className="mt-2 flex flex-wrap gap-2">
+                    {project.tags.map((tag) => (
+                      <li
+                        key={tag}
+                        className="rounded-full border border-border bg-secondary px-3 py-1 text-xs font-medium text-muted-foreground"
+                      >
+                        {tag}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </article>
+            </div>
           ))}
         </div>
       </div>
