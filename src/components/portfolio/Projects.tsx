@@ -12,6 +12,7 @@ import projectApi3 from "@/assets/project-api-3.jpg";
 
 const projects = [
   {
+    category: "Back-end",
     images: [projectBtc, projectBtc2, projectBtc3],
     title: "Painel de Investimento em BTC",
     subtitle: "Dashboard financeiro",
@@ -20,6 +21,7 @@ const projects = [
     tags: ["Node.js", "Express", "MySQL"],
   },
   {
+    category: "Front-end",
     images: [projectDecoradora, projectDecoradora2, projectDecoradora3],
     title: "Website para Decoradora de Festas",
     subtitle: "Landing page",
@@ -28,6 +30,8 @@ const projects = [
     tags: ["HTML 5", "CSS 3", "JavaScript"],
   },
   {
+    category: "Projetos em produção",
+    online: true,
     images: [projectApi, projectApi2, projectApi3],
     title: "API de Autenticação",
     subtitle: "Serviço back-end",
