@@ -1,3 +1,5 @@
+import lovableLogo from "@/assets/lovable-logo.jpg.asset.json";
+
 const backendSkills = [
   "Node.js",
   "Express",
@@ -61,6 +63,11 @@ export function Skills() {
           </div>
 
           <div className="rounded-xl border border-border bg-card p-6 shadow-card md:col-span-2">
+            <img
+              src={lovableLogo.url}
+              alt="Lovable"
+              className="mb-3 h-10 w-10 rounded-lg object-cover"
+            />
             <h3 className="text-lg font-semibold text-card-foreground">
               Artificial Intelligence Tools
             </h3>
