@@ -2,6 +2,8 @@ import claudeLogo from "@/assets/claude-code-logo.png";
 import figmaLogo from "@/assets/figma-logo.png";
 import lovableLogo from "@/assets/lovable-logo.png";
 import awsLogo from "@/assets/aws-logo.png";
+import profilePhoto from "@/assets/perfil.png.asset.json";
+import univespLogo from "@/assets/univesp-logo.jpg.asset.json";
 
 const rows = [
   {
@@ -59,7 +61,23 @@ export function Hero() {
     <section id="hero" className="pb-20 pt-16 md:pb-28 md:pt-20">
       <div className="mx-auto flex max-w-[1200px] flex-col items-center gap-10 px-6 lg:flex-row lg:items-center lg:justify-center">
         <div className="w-full max-w-2xl overflow-hidden rounded-xl border border-border bg-card shadow-card">
-          <div className="flex items-center gap-3 border-b border-border bg-secondary px-4 py-3">
+          {/* Perfil */}
+          <div className="flex items-center gap-4 border-b border-border px-5 py-4">
+            <img
+              src={profilePhoto.url}
+              alt="Foto de perfil de Luiz Eduardo"
+              loading="lazy"
+              width={64}
+              height={64}
+              className="h-16 w-16 rounded-full border border-border object-cover"
+            />
+            <div className="min-w-0">
+              <p className="truncate font-semibold tracking-tight">Luiz Eduardo</p>
+              <p className="text-sm font-medium text-orange-400">Backend Developer</p>
+            </div>
+          </div>
+
+          <div className="overflow-hidden">
             <div className="flex items-center gap-2">
               <span className="h-3 w-3 rounded-full bg-[#ff5f57]" aria-hidden />
               <span className="h-3 w-3 rounded-full bg-[#febc2e]" aria-hidden />
