@@ -88,7 +88,6 @@ export function Hero() {
               luiz@portfolio: ~
             </span>
             </div>
-          </div>
 
           <div className="p-5 font-mono text-sm md:p-6">
             <p className="text-muted-foreground">
