@@ -15,6 +15,12 @@ import projectEstoque3 from "@/assets/project-estoque-3.jpg";
 import projectBot from "@/assets/project-bot.jpg";
 import projectBot2 from "@/assets/project-bot-2.jpg";
 import projectBot3 from "@/assets/project-bot-3.jpg";
+import projectLoja from "@/assets/project-loja.jpg";
+import projectLoja2 from "@/assets/project-loja-2.jpg";
+import projectLoja3 from "@/assets/project-loja-3.jpg";
+import projectPainel from "@/assets/project-painel.jpg";
+import projectPainel2 from "@/assets/project-painel-2.jpg";
+import projectPainel3 from "@/assets/project-painel-3.jpg";
 
 type Project = {
   images: string[];
@@ -64,6 +70,7 @@ const groups: Group[] = [
   },
   {
     category: "Front-end",
+    carousel: true,
     projects: [
       {
         images: [projectDecoradora, projectDecoradora2, projectDecoradora3],
@@ -72,6 +79,22 @@ const groups: Group[] = [
         description:
           "Site institucional para divulgação de serviços de decoração de festas, com galeria de trabalhos, apresentação de pacotes e canal de contato.",
         tags: ["HTML 5", "CSS 3", "JavaScript"],
+      },
+      {
+        images: [projectLoja, projectLoja2, projectLoja3],
+        title: "Loja Virtual de Roupas",
+        subtitle: "E-commerce front-end",
+        description:
+          "Loja online com catálogo de produtos, página de detalhes, carrinho de compras e fluxo de checkout responsivo.",
+        tags: ["React", "Tailwind CSS", "Vite"],
+      },
+      {
+        images: [projectPainel, projectPainel2, projectPainel3],
+        title: "Painel Administrativo",
+        subtitle: "Dashboard web",
+        description:
+          "Painel de gestão com estatísticas, gráficos, tabela de usuários com filtros e páginas de configuração da conta.",
+        tags: ["React", "TypeScript", "Recharts"],
       },
     ],
   },
