@@ -78,7 +78,8 @@ export function Hero() {
           </div>
 
           <div className="overflow-hidden">
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-3 border-b border-border bg-secondary px-4 py-3">
+              <div className="flex items-center gap-2">
               <span className="h-3 w-3 rounded-full bg-[#ff5f57]" aria-hidden />
               <span className="h-3 w-3 rounded-full bg-[#febc2e]" aria-hidden />
               <span className="h-3 w-3 rounded-full bg-[#28c840]" aria-hidden />
@@ -86,6 +87,7 @@ export function Hero() {
             <span className="truncate font-mono text-xs text-muted-foreground">
               luiz@portfolio: ~
             </span>
+            </div>
           </div>
 
           <div className="p-5 font-mono text-sm md:p-6">
@@ -117,7 +119,36 @@ export function Hero() {
               <span className="text-sky-400">~</span>${" "}
               <span className="inline-block h-4 w-2 translate-y-0.5 bg-orange-400" aria-hidden />
             </p>
+          </div>
+          </div>
 
+          {/* Formação */}
+          <div className="flex items-center gap-4 border-t border-border px-5 py-4">
+            <img
+              src={univespLogo.url}
+              alt="Logo da UNIVESP"
+              loading="lazy"
+              width={48}
+              height={48}
+              className="h-12 w-12 shrink-0 rounded-lg object-cover"
+            />
+            <div className="min-w-0 flex-1">
+              <p className="text-sm font-medium">
+                Tecnologia da Informação — UNIVESP | 2024–2028
+              </p>
+              <p className="mt-0.5 text-xs text-muted-foreground">
+                Graduação em andamento — aproximadamente 50% concluído.
+              </p>
+              <div
+                className="mt-2 h-1 w-full max-w-52 overflow-hidden rounded-full bg-secondary"
+                role="progressbar"
+                aria-valuenow={50}
+                aria-valuemin={0}
+                aria-valuemax={100}
+              >
+                <div className="h-full w-1/2 rounded-full bg-orange-400" />
+              </div>
+            </div>
           </div>
         </div>
 
