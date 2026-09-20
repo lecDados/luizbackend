@@ -122,8 +122,18 @@ export function Hero() {
               <span className="text-sky-400">~</span>$ cat about.txt
             </p>
             <p className="mt-2 leading-relaxed text-muted-foreground">
-              Backend developer focused on building scalable APIs, authentication
-              systems, databases, and clean software architecture.
+              I enjoy solving real-world problems through backend development. I
+              focus on writing organized, maintainable, and scalable code while
+              continuously improving my technical skills.
+            </p>
+            <p className="mt-3 leading-relaxed text-muted-foreground">
+              I work with authentication systems, REST APIs, databases, Docker,
+              AI-assisted development, Supabase integrations, payment workflows,
+              and modern backend architectures.
+            </p>
+            <p className="mt-3 leading-relaxed text-muted-foreground">
+              I value clean code, continuous learning, and building reliable
+              software.
             </p>
 
             <p className="mt-6 text-muted-foreground">
