@@ -5,7 +5,6 @@ import { Services } from "@/components/portfolio/Services";
 import { Projects } from "@/components/portfolio/Projects";
 import { Skills } from "@/components/portfolio/Skills";
 import { Books } from "@/components/portfolio/Books";
-import { About } from "@/components/portfolio/About";
 import { Contact } from "@/components/portfolio/Contact";
 import { Footer } from "@/components/portfolio/Footer";
 import { CodeBackground } from "@/components/portfolio/CodeBackground";
@@ -43,8 +42,8 @@ function Portfolio() {
         <Projects />
         <Skills />
         <Books />
-        <About />
         <Contact />
+
       </main>
       <Footer />
     </div>
