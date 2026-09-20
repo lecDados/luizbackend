@@ -61,19 +61,45 @@ export function Hero() {
     <section id="hero" className="pb-20 pt-16 md:pb-28 md:pt-20">
       <div className="mx-auto flex max-w-[1200px] flex-col items-center gap-10 px-6 lg:flex-row lg:items-center lg:justify-center">
         <div className="w-full max-w-2xl overflow-hidden rounded-xl border border-border bg-card shadow-card">
-          {/* Perfil */}
-          <div className="flex items-center gap-4 border-b border-border px-5 py-4">
+          {/* Perfil + Formação */}
+          <div className="flex flex-wrap items-center gap-4 border-b border-border px-5 py-4">
             <img
               src={profilePhoto.url}
               alt="Foto de perfil de Luiz Eduardo"
               loading="lazy"
-              width={64}
-              height={64}
-              className="h-16 w-16 rounded-full border border-border object-cover"
+              width={56}
+              height={56}
+              className="h-14 w-14 rounded-full border border-border object-cover"
             />
             <div className="min-w-0">
               <p className="truncate font-semibold tracking-tight">Luiz Eduardo</p>
               <p className="text-sm font-medium text-orange-400">Backend Developer</p>
+            </div>
+            <div aria-hidden className="hidden h-9 w-px bg-border sm:block" />
+            <img
+              src={univespLogo.url}
+              alt="Logo da UNIVESP"
+              loading="lazy"
+              width={28}
+              height={28}
+              className="h-7 w-7 shrink-0 rounded object-cover"
+            />
+            <div className="min-w-[160px] flex-1">
+              <p className="text-xs font-medium leading-snug">
+                Tecnologia da Informação — UNIVESP | 2024–2028
+              </p>
+              <p className="mt-0.5 text-[11px] leading-snug text-muted-foreground">
+                Graduação em andamento — aproximadamente 50% concluído.
+              </p>
+              <div
+                className="mt-1.5 h-1 w-full max-w-40 overflow-hidden rounded-full bg-secondary"
+                role="progressbar"
+                aria-valuenow={50}
+                aria-valuemin={0}
+                aria-valuemax={100}
+              >
+                <div className="h-full w-1/2 rounded-full bg-orange-400" />
+              </div>
             </div>
           </div>
 
@@ -119,35 +145,6 @@ export function Hero() {
               <span className="inline-block h-4 w-2 translate-y-0.5 bg-orange-400" aria-hidden />
             </p>
           </div>
-          </div>
-
-          {/* Formação */}
-          <div className="flex items-center gap-4 border-t border-border px-5 py-4">
-            <img
-              src={univespLogo.url}
-              alt="Logo da UNIVESP"
-              loading="lazy"
-              width={48}
-              height={48}
-              className="h-12 w-12 shrink-0 rounded-lg object-cover"
-            />
-            <div className="min-w-0 flex-1">
-              <p className="text-sm font-medium">
-                Tecnologia da Informação — UNIVESP | 2024–2028
-              </p>
-              <p className="mt-0.5 text-xs text-muted-foreground">
-                Graduação em andamento — aproximadamente 50% concluído.
-              </p>
-              <div
-                className="mt-2 h-1 w-full max-w-52 overflow-hidden rounded-full bg-secondary"
-                role="progressbar"
-                aria-valuenow={50}
-                aria-valuemin={0}
-                aria-valuemax={100}
-              >
-                <div className="h-full w-1/2 rounded-full bg-orange-400" />
-              </div>
-            </div>
           </div>
         </div>
 
