@@ -119,18 +119,6 @@ export function Hero() {
             <p className="text-muted-foreground">
               <span className="text-emerald-400">luiz@portfolio</span>
               <span className="text-muted-foreground">:</span>
-              <span className="text-sky-400">~</span>$ whoami
-            </p>
-            <h1 className="mt-2 text-3xl font-bold tracking-tight md:text-5xl">
-              Luiz Eduardo
-            </h1>
-            <p className="mt-1 text-lg font-medium text-orange-400 md:text-xl">
-              Backend Developer
-            </p>
-
-            <p className="mt-6 text-muted-foreground">
-              <span className="text-emerald-400">luiz@portfolio</span>
-              <span className="text-muted-foreground">:</span>
               <span className="text-sky-400">~</span>$ cat about.txt
             </p>
             <p className="mt-2 leading-relaxed text-muted-foreground">
