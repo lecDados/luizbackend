@@ -75,17 +75,16 @@ export function Hero() {
               <p className="truncate font-semibold tracking-tight">Luiz Eduardo</p>
               <p className="text-sm font-medium text-orange-400">Backend Developer</p>
             </div>
-            <div aria-hidden className="hidden h-9 w-px bg-border sm:block" />
-            <img
-              src={univespLogo.url}
-              alt="Logo da UNIVESP"
-              loading="lazy"
-              width={28}
-              height={28}
-              className="h-7 w-7 shrink-0 rounded object-cover"
-            />
             <div className="min-w-[160px] flex-1">
-              <p className="text-xs font-medium leading-snug">
+              <p className="flex items-center gap-2 text-xs font-medium leading-snug">
+                <img
+                  src={univespLogo.url}
+                  alt="Logo da UNIVESP"
+                  loading="lazy"
+                  width={20}
+                  height={20}
+                  className="h-5 w-5 shrink-0 rounded object-cover"
+                />
                 Tecnologia da Informação — UNIVESP | 2024–2028
               </p>
               <p className="mt-0.5 text-[11px] leading-snug text-muted-foreground">
