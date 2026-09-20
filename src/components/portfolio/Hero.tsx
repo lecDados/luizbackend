@@ -65,7 +65,7 @@ export function Hero() {
       <div className="mx-auto flex max-w-[1200px] flex-col items-center gap-10 px-6 lg:flex-row lg:items-center lg:justify-center">
         <div className="w-full max-w-2xl overflow-hidden rounded-xl border border-border bg-card shadow-card">
           {/* Perfil + Formação */}
-          <div className="flex flex-wrap items-center gap-4 border-b border-border bg-secondary/40 px-5 py-4">
+          <div className="flex flex-wrap items-center gap-4 border-b border-orange-400/20 bg-orange-500/15 px-5 py-4">
             <img
               src={profilePhoto.url}
               alt="Foto de perfil de Luiz Eduardo"
