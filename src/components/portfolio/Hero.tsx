@@ -2,6 +2,9 @@ import claudeLogo from "@/assets/claude-code-logo.png";
 import figmaLogo from "@/assets/figma-logo.png";
 import lovableLogo from "@/assets/lovable-logo.png";
 import awsLogo from "@/assets/aws-logo.png";
+import dockerLogo from "@/assets/docker.png.asset.json";
+import githubLogo from "@/assets/github.jpg.asset.json";
+import oracleLogo from "@/assets/oracle.jpg.asset.json";
 import profilePhoto from "@/assets/perfil.png.asset.json";
 import univespLogo from "@/assets/univesp-logo.jpg.asset.json";
 
@@ -170,6 +173,18 @@ export function Hero() {
             {/* Claude Code - center front */}
             <div className="absolute left-1/2 top-1/2 z-30 h-24 w-24 -translate-x-1/2 -translate-y-1/2 mt-[81px] overflow-hidden rounded-full border-2 border-border bg-card shadow-card">
               <img src={claudeLogo} alt="Claude Code" className="h-full w-full object-cover" />
+            </div>
+            {/* Docker - pequeno, topo esquerda */}
+            <div className="absolute left-1/2 top-1/2 z-[25] h-12 w-12 -translate-x-1/2 -translate-y-1/2 -mt-[120px] -ml-[70px] overflow-hidden rounded-[100%] border-2 border-border bg-card shadow-card">
+              <img src={dockerLogo.url} alt="Docker" className="h-full w-full object-cover" />
+            </div>
+            {/* GitHub - médio, baixo direita */}
+            <div className="absolute left-1/2 top-1/2 z-40 h-14 w-14 -translate-x-1/2 -translate-y-1/2 mt-[60px] ml-[110px] overflow-hidden rounded-[100%] border-2 border-border bg-card shadow-card">
+              <img src={githubLogo.url} alt="GitHub" className="h-full w-full object-cover" />
+            </div>
+            {/* Oracle - bem pequeno, sobreposto à direita */}
+            <div className="absolute left-1/2 top-1/2 z-40 h-10 w-10 -translate-x-1/2 -translate-y-1/2 -mt-[30px] ml-[120px] overflow-hidden rounded-[100%] border-2 border-border bg-card shadow-card">
+              <img src={oracleLogo.url} alt="Oracle" className="h-full w-full object-cover" />
             </div>
           </div>
         </div>
