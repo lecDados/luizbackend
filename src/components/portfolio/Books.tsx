@@ -1,4 +1,3 @@
-import { BookOpen } from "lucide-react";
 
 const books = [
   {
@@ -42,7 +41,6 @@ export function Books() {
           <div aria-hidden="true" className="flex items-center gap-4 text-orange-500">
             <div className="h-6 w-10 rotate-6 rounded-sm border-2 border-orange-500/60" />
             <div className="h-12 w-12 rounded-full border-2 border-orange-500/70" />
-            <BookOpen className="h-12 w-12 text-orange-400" strokeWidth={1.5} />
             <div className="h-0 w-0 border-x-[16px] border-b-[28px] border-x-transparent border-b-orange-500/70" />
           </div>
         </div>
@@ -53,14 +51,9 @@ export function Books() {
               key={book.title}
               className="rounded-xl border border-border bg-card p-6 shadow-card transition-colors hover:border-orange-500/40"
             >
-              <div className="flex items-center gap-3">
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-orange-500/15">
-                  <BookOpen className="h-5 w-5 text-orange-400" />
-                </div>
-                <h3 className="text-lg font-semibold text-card-foreground">
-                  {book.title}
-                </h3>
-              </div>
+              <h3 className="text-lg font-semibold text-card-foreground">
+                {book.title}
+              </h3>
               <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
                 {book.points.map((point) => (
                   <li key={point} className="flex items-start gap-2">
