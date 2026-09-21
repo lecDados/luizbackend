@@ -1,4 +1,3 @@
-import { BookOpen } from "lucide-react";
 
 const books = [
   {
