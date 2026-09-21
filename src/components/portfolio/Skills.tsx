@@ -9,6 +9,12 @@ const backendSkills = [
   "Docker",
   "MongoDB",
   "MySQL",
+  "PostgreSQL",
+  "AWS",
+  "Oracle",
+  "Linux",
+  "Redis",
+  "TypeScript",
   "HTML 5",
   "CSS 3",
   "JavaScript",
@@ -42,7 +48,7 @@ export function Skills() {
         <div className="mt-10 grid gap-6 md:grid-cols-2">
           <div className="rounded-xl border border-border bg-card p-6 shadow-card">
             <h3 className="text-lg font-semibold text-card-foreground">
-              Backend
+              Skills
             </h3>
             <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
               {backendSkills.map((skill) => (
