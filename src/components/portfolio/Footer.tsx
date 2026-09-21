@@ -94,7 +94,7 @@ function Marquee() {
 
 export function Footer() {
   return (
-    <footer className="relative overflow-hidden border-t border-border px-6 py-10">
+    <footer className="relative overflow-hidden border-t border-border bg-black px-6 py-10">
       <Marquee />
       <div className="relative z-10 mx-auto max-w-[1200px]">
         <p className="text-lg font-semibold text-foreground">Luiz Eduardo</p>
