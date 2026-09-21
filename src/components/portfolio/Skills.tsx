@@ -15,11 +15,10 @@ const backendSkills = [
   "Linux",
   "Redis",
   "TypeScript",
-  "HTML 5",
-  "CSS 3",
-  "JavaScript",
   "Jest",
 ];
+
+const frontendSkills = ["HTML 5", "CSS 3", "JavaScript", "React"];
 
 const versionControlSkills = ["Git", "GitHub", "GitFlow"];
 
@@ -46,15 +45,32 @@ export function Skills() {
         </p>
 
         <div className="mt-10 grid gap-6 md:grid-cols-2">
-          <div className="rounded-xl border border-border bg-card p-6 shadow-card">
+          <div className="rounded-xl border border-orange-400/20 bg-orange-500/15 p-6 shadow-card">
             <h3 className="text-lg font-semibold text-card-foreground">
               Skills
             </h3>
-            <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
-              {backendSkills.map((skill) => (
-                <li key={skill}>{skill}</li>
-              ))}
-            </ul>
+            <div className="mt-4 grid gap-4 sm:grid-cols-2">
+              <div>
+                <h4 className="text-sm font-semibold text-foreground">
+                  Back-end
+                </h4>
+                <ul className="mt-2 space-y-2 text-sm text-muted-foreground">
+                  {backendSkills.map((skill) => (
+                    <li key={skill}>{skill}</li>
+                  ))}
+                </ul>
+              </div>
+              <div>
+                <h4 className="text-sm font-semibold text-foreground">
+                  Front-end
+                </h4>
+                <ul className="mt-2 space-y-2 text-sm text-muted-foreground">
+                  {frontendSkills.map((skill) => (
+                    <li key={skill}>{skill}</li>
+                  ))}
+                </ul>
+              </div>
+            </div>
           </div>
 
           <div className="rounded-xl border border-border bg-card p-6 shadow-card">
