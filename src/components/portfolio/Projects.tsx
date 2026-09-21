@@ -21,6 +21,12 @@ import projectLoja3 from "@/assets/project-loja-3.jpg";
 import projectPainel from "@/assets/project-painel.jpg";
 import projectPainel2 from "@/assets/project-painel-2.jpg";
 import projectPainel3 from "@/assets/project-painel-3.jpg";
+import projectPagamentos from "@/assets/project-pagamentos.jpg";
+import projectPagamentos2 from "@/assets/project-pagamentos-2.jpg";
+import projectPagamentos3 from "@/assets/project-pagamentos-3.jpg";
+import projectCotacoes from "@/assets/project-cotacoes.jpg";
+import projectCotacoes2 from "@/assets/project-cotacoes-2.jpg";
+import projectCotacoes3 from "@/assets/project-cotacoes-3.jpg";
 
 type Project = {
   images: string[];
@@ -101,6 +107,7 @@ const groups: Group[] = [
   {
     category: "Projetos em produção",
     online: true,
+    carousel: true,
     projects: [
       {
         images: [projectApi, projectApi2, projectApi3],
@@ -109,6 +116,22 @@ const groups: Group[] = [
         description:
           "API REST para autenticação e gestão de usuários, com tokens JWT, validação de dados, testes automatizados e documentação de endpoints.",
         tags: ["Node.js", "JWT", "Zod"],
+      },
+      {
+        images: [projectPagamentos, projectPagamentos2, projectPagamentos3],
+        title: "API de Pagamentos",
+        subtitle: "Integração financeira",
+        description:
+          "Serviço de processamento de pagamentos com webhooks, conciliação de transações, painel de acompanhamento e tratamento de falhas com retentativas.",
+        tags: ["Node.js", "PostgreSQL", "Webhooks"],
+      },
+      {
+        images: [projectCotacoes, projectCotacoes2, projectCotacoes3],
+        title: "API de Cotações em Tempo Real",
+        subtitle: "Serviço de mercado",
+        description:
+          "Serviço de cotações financeiras em tempo real com filas de processamento, cache de mercado e monitoramento de performance das mensagens.",
+        tags: ["Node.js", "Redis", "WebSockets"],
       },
     ],
   },
