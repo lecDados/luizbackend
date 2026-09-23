@@ -37,12 +37,6 @@ export function Books() {
             </p>
           </div>
 
-          {/* Livro aberto + formas geométricas de estudo */}
-          <div aria-hidden="true" className="flex items-center gap-4 text-orange-500">
-            <div className="h-6 w-10 rotate-6 rounded-sm border-2 border-orange-500/60" />
-            <div className="h-12 w-12 rounded-full border-2 border-orange-500/70" />
-            <div className="h-0 w-0 border-x-[16px] border-b-[28px] border-x-transparent border-b-orange-500/70" />
-          </div>
         </div>
 
         <div className="mt-10 grid gap-6 md:grid-cols-2">
