@@ -47,17 +47,17 @@ export function Services() {
           Soluções que desenvolvo para automatizar e escalar negócios.
         </p>
 
-        <ul className="mt-10 grid grid-cols-4 gap-3 md:gap-4">
+        <ul className="mt-10 grid grid-cols-3 gap-3 md:gap-4">
           {services.map((service) => {
             const Icon = service.icon;
             return (
               <li key={service.label}>
-                <article className="flex h-full flex-col items-center gap-2 rounded-xl border border-border bg-card p-3 text-center shadow-card transition-colors duration-200 hover:border-orange-500/40 md:p-4">
+                <article className="flex h-full flex-col items-center gap-2 rounded-xl border border-white/25 bg-white/20 p-3 text-center shadow-card transition-colors duration-200 hover:border-orange-500/60 md:p-4">
                   <Icon
                     className={`h-5 w-5 shrink-0 md:h-6 md:w-6 ${service.color}`}
                     aria-hidden
                   />
-                  <p className="text-[10px] font-medium leading-snug text-muted-foreground md:text-xs">
+                  <p className="text-[10px] font-medium leading-snug text-foreground md:text-xs">
                     {service.label}
                   </p>
                 </article>
