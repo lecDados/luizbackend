@@ -17,22 +17,23 @@ import {
 type Service = {
   icon: LucideIcon;
   label: string;
-  color: string;
+  gradient: string;
 };
 
+// Cores vivas em degradês suaves, distribuídas aleatoriamente entre os cards
 const services: Service[] = [
-  { icon: MessageSquareText, label: "Automações de mensagens", color: "text-emerald-400" },
-  { icon: Sheet, label: "Otimização de planilhas", color: "text-green-400" },
-  { icon: Database, label: "Integração com bancos de dados", color: "text-sky-400" },
-  { icon: Sparkles, label: "Projetos com Lovable", color: "text-orange-400" },
-  { icon: Globe, label: "Web sites", color: "text-cyan-400" },
-  { icon: FileCode2, label: "Sistemas em Python", color: "text-yellow-400" },
-  { icon: Plug, label: "Integração com APIs", color: "text-violet-400" },
-  { icon: Bot, label: "Sistema com agente AI", color: "text-fuchsia-400" },
-  { icon: ShoppingCart, label: "Automações com API Mercado Livre", color: "text-amber-400" },
-  { icon: Send, label: "Automação com Telegram", color: "text-blue-400" },
-  { icon: MessageCircle, label: "Automações com WhatsApp", color: "text-lime-400" },
-  { icon: Cloud, label: "Projetos na nuvem (VMs)", color: "text-indigo-400" },
+  { icon: MessageSquareText, label: "Automações de mensagens", gradient: "linear-gradient(135deg, #f97316 0%, #ec4899 100%)" },
+  { icon: Sheet, label: "Otimização de planilhas", gradient: "linear-gradient(135deg, #22c55e 0%, #14b8a6 100%)" },
+  { icon: Database, label: "Integração com bancos de dados", gradient: "linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%)" },
+  { icon: Sparkles, label: "Projetos com Lovable", gradient: "linear-gradient(135deg, #a855f7 0%, #ec4899 100%)" },
+  { icon: Globe, label: "Web sites", gradient: "linear-gradient(135deg, #06b6d4 0%, #3b82f6 100%)" },
+  { icon: FileCode2, label: "Sistemas em Python", gradient: "linear-gradient(135deg, #eab308 0%, #f97316 100%)" },
+  { icon: Plug, label: "Integração com APIs", gradient: "linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%)" },
+  { icon: Bot, label: "Sistema com agente AI", gradient: "linear-gradient(135deg, #ec4899 0%, #f43f5e 100%)" },
+  { icon: ShoppingCart, label: "Automações com API Mercado Livre", gradient: "linear-gradient(135deg, #f59e0b 0%, #ef4444 100%)" },
+  { icon: Send, label: "Automação com Telegram", gradient: "linear-gradient(135deg, #10b981 0%, #3b82f6 100%)" },
+  { icon: MessageCircle, label: "Automações com WhatsApp", gradient: "linear-gradient(135deg, #84cc16 0%, #22c55e 100%)" },
+  { icon: Cloud, label: "Projetos na nuvem (VMs)", gradient: "linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%)" },
 ];
 
 export function Services() {
@@ -52,12 +53,15 @@ export function Services() {
             const Icon = service.icon;
             return (
               <li key={service.label}>
-                <article className="flex h-full flex-col items-center gap-2 rounded-xl border border-white/25 bg-white/20 p-3 text-center shadow-card transition-colors duration-200 hover:border-orange-500/60 md:p-4">
+                <article
+                  className="flex h-full flex-col items-center gap-2 rounded-xl border border-white/25 p-3 text-center shadow-card transition-transform duration-200 hover:scale-[1.03] md:p-4"
+                  style={{ backgroundImage: service.gradient }}
+                >
                   <Icon
-                    className={`h-5 w-5 shrink-0 md:h-6 md:w-6 ${service.color}`}
+                    className="h-5 w-5 shrink-0 text-white md:h-6 md:w-6"
                     aria-hidden
                   />
-                  <p className="text-[10px] font-medium leading-snug text-foreground md:text-xs">
+                  <p className="text-[10px] font-medium leading-snug text-white md:text-xs">
                     {service.label}
                   </p>
                 </article>
