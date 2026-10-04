@@ -52,7 +52,7 @@ export function Services() {
             const Icon = service.icon;
             return (
               <li key={service.label}>
-                <article className="flex h-full flex-col items-center gap-2 rounded-xl border border-white/15 bg-white/10 p-3 text-center shadow-card transition-colors duration-200 hover:border-orange-500/60 md:p-4">
+                <article className="flex h-full flex-col items-center gap-2 rounded-xl border border-white/25 bg-white/20 p-3 text-center shadow-card transition-colors duration-200 hover:border-orange-500/60 md:p-4">
                   <Icon
                     className={`h-5 w-5 shrink-0 md:h-6 md:w-6 ${service.color}`}
                     aria-hidden
