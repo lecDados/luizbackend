@@ -21,7 +21,6 @@ const backendSkills = [
 
 const frontendSkills = ["HTML 5", "CSS 3", "JavaScript", "React"];
 
-const versionControlSkills = ["Git", "GitHub", "GitFlow"];
 
 const aiTools = [
   "Experience using AI tools to speed up software development",
