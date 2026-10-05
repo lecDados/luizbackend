@@ -127,49 +127,6 @@ export function Skills() {
             </a>
           </div>
 
-          <div className="flex flex-col gap-6">
-            <div
-              className="rounded-xl border border-white/20 p-6 shadow-card"
-              style={{ backgroundImage: "linear-gradient(135deg, #f97316 0%, #ec4899 100%)" }}
-            >
-              <h3 className="text-lg font-semibold text-white">
-                Git — Versionamento
-              </h3>
-              <ul className="mt-4 space-y-2 text-sm text-white/90">
-                <li>Git</li>
-                <li>GitHub</li>
-                <li>GitFlow</li>
-              </ul>
-            </div>
-
-            <div
-              className="rounded-xl border border-white/20 p-6 shadow-card"
-              style={{ backgroundImage: "linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%)" }}
-            >
-              <h3 className="text-lg font-semibold text-white">
-                VMs &amp; Cloud
-              </h3>
-              <ul className="mt-4 space-y-2 text-sm text-white/90">
-                <li>AWS</li>
-                <li>Oracle Cloud</li>
-                <li>Linux</li>
-              </ul>
-            </div>
-
-            <div
-              className="rounded-xl border border-white/20 p-6 shadow-card"
-              style={{ backgroundImage: "linear-gradient(135deg, #22c55e 0%, #06b6d4 100%)" }}
-            >
-              <h3 className="text-lg font-semibold text-white">
-                Distribuições Linux mais usadas em VMs
-              </h3>
-              <ul className="mt-4 space-y-2 text-sm text-white/90">
-                <li>Ubuntu</li>
-                <li>Debian</li>
-                <li>CentOS</li>
-              </ul>
-            </div>
-          </div>
 
           <div className="rounded-xl border border-border bg-card p-6 shadow-card md:col-span-2">
             <img
