@@ -142,30 +142,6 @@ export function Skills() {
             </ul>
           </div>
 
-          <div className="rounded-xl border border-blue-400/20 bg-blue-500/15 p-6 shadow-card">
-            <h3 className="text-lg font-semibold text-card-foreground">
-              Languages
-            </h3>
-            <p className="mt-4 text-sm text-muted-foreground">
-              English
-              <br />
-              Currently learning — Beginner level
-            </p>
-          </div>
-
-          <div className="rounded-xl border border-border bg-card p-6 shadow-card">
-            <h3 className="text-lg font-semibold text-card-foreground">
-              Experience
-            </h3>
-            <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
-              I have been consistently studying software development for over{" "}
-              <strong className="font-semibold text-card-foreground">
-                3 years
-              </strong>
-              , focusing primarily on backend technologies and software
-              architecture.
-            </p>
-          </div>
         </div>
       </div>
     </section>
