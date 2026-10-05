@@ -112,6 +112,27 @@ export function Solutions() {
             />
           ))}
         </div>
+
+        <div className="mt-8 flex flex-col items-center gap-3 text-center">
+          <p className="text-sm text-muted-foreground md:text-base">
+            Está buscando algo semelhante ou tem uma ideia?
+          </p>
+          <button
+            type="button"
+            onClick={() => {
+              const el = document.getElementById("contact");
+              if (el) {
+                window.scrollTo({
+                  top: el.getBoundingClientRect().top + window.scrollY - 80,
+                  behavior: "smooth",
+                });
+              }
+            }}
+            className="rounded-full bg-orange-500 px-6 py-2.5 text-sm font-semibold text-white shadow-card transition-transform duration-200 hover:scale-105 hover:bg-orange-400"
+          >
+            Contato
+          </button>
+        </div>
       </div>
     </section>
   );
