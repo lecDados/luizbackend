@@ -193,3 +193,8 @@ a[href*="lovable.dev/projects"] {
 .tecnologias{
   color: oklch(0.55 0.18 25);
 }
+
+/* Texto/ícone dos cards perolados — tons escuros para contraste sobre degradês claros */
+.pearl-label {
+  color: oklch(0.22 0.02 270);
+}

@@ -83,12 +83,12 @@ export function Solutions() {
                   const Icon = slides[active].icon;
                   return (
                     <Icon
-                      className="h-7 w-7 shrink-0 text-foreground md:h-8 md:w-8"
+                      className="pearl-label h-7 w-7 shrink-0 md:h-8 md:w-8"
                       aria-hidden
                     />
                   );
                 })()}
-                <p className="text-base font-semibold leading-snug text-foreground md:text-xl">
+                <p className="pearl-label text-base font-semibold leading-snug md:text-xl">
                   {slides[active].label}
                 </p>
               </article>
