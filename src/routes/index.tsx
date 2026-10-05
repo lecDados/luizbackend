@@ -42,7 +42,6 @@ function Portfolio() {
         <Services />
         <Projects />
         <Skills />
-        <Books />
         <Contact />
 
       </main>
