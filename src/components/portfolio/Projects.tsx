@@ -158,7 +158,7 @@ function CardCarousel({
     <div
       className={`group/carousel relative w-full shrink-0 sm:w-64 sm:border-b-0 sm:border-r md:w-72 ${
         accent
-          ? "border-b border-emerald-300/30 sm:border-r-emerald-300/30"
+          ? "border-b border-transparent sm:border-r-transparent"
           : "border-b border-border sm:border-r"
       }`}
     >
@@ -190,7 +190,7 @@ function CardCarousel({
         aria-label="Imagem anterior"
         className={`absolute left-2 top-1/2 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-full shadow-card backdrop-blur-sm transition-colors ${
           accent
-            ? "border border-emerald-300/40 bg-emerald-950/70 text-emerald-200 hover:bg-emerald-900/80 hover:text-emerald-100"
+            ? "border border-transparent bg-background/80 text-lime-300 hover:bg-secondary hover:text-lime-200"
             : "border border-border bg-background/80 text-muted-foreground hover:bg-secondary hover:text-foreground"
         }`}
       >
@@ -202,7 +202,7 @@ function CardCarousel({
         aria-label="Próxima imagem"
         className={`absolute right-2 top-1/2 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-full shadow-card backdrop-blur-sm transition-colors ${
           accent
-            ? "border border-emerald-300/40 bg-emerald-950/70 text-emerald-200 hover:bg-emerald-900/80 hover:text-emerald-100"
+            ? "border border-transparent bg-background/80 text-lime-300 hover:bg-secondary hover:text-lime-200"
             : "border border-border bg-background/80 text-muted-foreground hover:bg-secondary hover:text-foreground"
         }`}
       >
@@ -219,7 +219,7 @@ function CardCarousel({
             className={`h-1.5 w-1.5 rounded-full transition-colors ${
               i === index
                 ? accent
-                  ? "bg-emerald-300"
+                  ? "bg-lime-300"
                   : "bg-orange-400"
                 : "bg-muted-foreground/50"
             }`}
