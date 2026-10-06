@@ -262,7 +262,11 @@ function ProjectCard({ project }: { project: Project }) {
         >
           {project.subtitle}
         </p>
-        <p className="mt-1 text-sm leading-relaxed text-emerald-50/85">
+        <p
+          className={`mt-1 text-sm leading-relaxed ${
+            green ? "text-emerald-50/85" : "text-muted-foreground"
+          }`}
+        >
           {project.description}
         </p>
         <ul className="mt-2 flex flex-wrap gap-2">
