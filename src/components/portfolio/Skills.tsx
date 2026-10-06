@@ -1,5 +1,6 @@
 import { Github, Trophy } from "lucide-react";
 import lovableLogo from "@/assets/lovable-logo.jpg.asset.json";
+import ciscoLogo from "@/assets/cisco-logo.png.asset.json";
 
 const backendSkills = [
   "Node.js",
@@ -120,21 +121,28 @@ export function Skills() {
               Certificados
             </h3>
             <ul className="mt-2 flex flex-wrap gap-3">
-              {["Cisco - Python 1", "Cisco - Python 2", "FIAP - IA", "AWS - awsCode"].map(
-                (name) => (
-                  <li key={name} className="flex w-16 flex-col items-center gap-1">
+              {[
+                { name: "Cisco - Python 1", img: ciscoLogo.url },
+                { name: "Cisco - Python 2", img: ciscoLogo.url },
+                { name: "FIAP - IA" },
+                { name: "AWS - awsCode" },
+              ].map((badge) => (
+                  <li key={badge.name} className="flex w-16 flex-col items-center gap-1">
                     <span
-                      className="flex h-12 w-12 items-center justify-center rounded-full border border-border bg-secondary shadow-card"
-                      title={name}
+                      className="flex h-12 w-12 items-center justify-center overflow-hidden rounded-full border border-border bg-secondary shadow-card"
+                      title={badge.name}
                     >
-                      <Trophy className="h-5 w-5 text-orange-400" aria-hidden />
+                      {badge.img ? (
+                        <img src={badge.img} alt={`${badge.name} logo`} className="h-full w-full object-cover" loading="lazy" />
+                      ) : (
+                        <Trophy className="h-5 w-5 text-orange-400" aria-hidden />
+                      )}
                     </span>
                     <span className="text-center text-[10px] font-medium leading-tight text-muted-foreground">
-                      {name}
+                      {badge.name}
                     </span>
                   </li>
-                )
-              )}
+              ))}
             </ul>
 
             <a
