@@ -34,6 +34,7 @@ type Project = {
   subtitle: string;
   description: string;
   tags: string[];
+  accent?: "green";
 };
 
 type Group = {
@@ -116,6 +117,7 @@ const groups: Group[] = [
         description:
           "API REST para autenticação e gestão de usuários, com tokens JWT, validação de dados, testes automatizados e documentação de endpoints.",
         tags: ["Node.js", "JWT", "Zod"],
+        accent: "green",
       },
       {
         images: [projectPagamentos, projectPagamentos2, projectPagamentos3],
@@ -137,7 +139,15 @@ const groups: Group[] = [
   },
 ];
 
-function CardCarousel({ images, title }: { images: string[]; title: string }) {
+function CardCarousel({
+  images,
+  title,
+  accent,
+}: {
+  images: string[];
+  title: string;
+  accent?: Project["accent"];
+}) {
   const [index, setIndex] = useState(0);
 
   const prev = () =>
@@ -145,7 +155,13 @@ function CardCarousel({ images, title }: { images: string[]; title: string }) {
   const next = () => setIndex((i) => (i + 1) % images.length);
 
   return (
-    <div className="group/carousel relative w-full shrink-0 border-b border-border sm:w-64 sm:border-b-0 sm:border-r md:w-72">
+    <div
+      className={`group/carousel relative w-full shrink-0 sm:w-64 sm:border-b-0 sm:border-r md:w-72 ${
+        accent
+          ? "border-b border-emerald-300/30 sm:border-r-emerald-300/30"
+          : "border-b border-border sm:border-r"
+      }`}
+    >
       <div className="overflow-hidden">
         <div
           className="flex h-48 w-full sm:h-full"
@@ -172,7 +188,11 @@ function CardCarousel({ images, title }: { images: string[]; title: string }) {
         type="button"
         onClick={prev}
         aria-label="Imagem anterior"
-        className="absolute left-2 top-1/2 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-full border border-border bg-background/80 text-muted-foreground shadow-card backdrop-blur-sm transition-colors hover:bg-secondary hover:text-foreground"
+        className={`absolute left-2 top-1/2 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-full shadow-card backdrop-blur-sm transition-colors ${
+          accent
+            ? "border border-emerald-300/40 bg-emerald-950/70 text-emerald-200 hover:bg-emerald-900/80 hover:text-emerald-100"
+            : "border border-border bg-background/80 text-muted-foreground hover:bg-secondary hover:text-foreground"
+        }`}
       >
         <ChevronLeft size={16} />
       </button>
@@ -180,7 +200,11 @@ function CardCarousel({ images, title }: { images: string[]; title: string }) {
         type="button"
         onClick={next}
         aria-label="Próxima imagem"
-        className="absolute right-2 top-1/2 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-full border border-border bg-background/80 text-muted-foreground shadow-card backdrop-blur-sm transition-colors hover:bg-secondary hover:text-foreground"
+        className={`absolute right-2 top-1/2 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-full shadow-card backdrop-blur-sm transition-colors ${
+          accent
+            ? "border border-emerald-300/40 bg-emerald-950/70 text-emerald-200 hover:bg-emerald-900/80 hover:text-emerald-100"
+            : "border border-border bg-background/80 text-muted-foreground hover:bg-secondary hover:text-foreground"
+        }`}
       >
         <ChevronRight size={16} />
       </button>
@@ -193,7 +217,11 @@ function CardCarousel({ images, title }: { images: string[]; title: string }) {
             onClick={() => setIndex(i)}
             aria-label={`Ir para imagem ${i + 1}`}
             className={`h-1.5 w-1.5 rounded-full transition-colors ${
-              i === index ? "bg-orange-400" : "bg-muted-foreground/50"
+              i === index
+                ? accent
+                  ? "bg-emerald-300"
+                  : "bg-orange-400"
+                : "bg-muted-foreground/50"
             }`}
           />
         ))}
@@ -203,25 +231,53 @@ function CardCarousel({ images, title }: { images: string[]; title: string }) {
 }
 
 function ProjectCard({ project }: { project: Project }) {
+  const green = project.accent === "green";
+
   return (
-    <article className="flex flex-col overflow-hidden rounded-xl border border-border bg-card shadow-card transition-transform duration-300 hover:-translate-y-1 sm:flex-row">
-      <CardCarousel images={project.images} title={project.title} />
+    <article
+      className={`flex flex-col overflow-hidden rounded-xl border shadow-card transition-transform duration-300 hover:-translate-y-1 sm:flex-row ${
+        green
+          ? "border-emerald-300/40 bg-gradient-to-br from-emerald-400/20 via-emerald-500/10 to-emerald-900/20"
+          : "border-border bg-card"
+      }`}
+    >
+      <CardCarousel
+        images={project.images}
+        title={project.title}
+        accent={project.accent}
+      />
 
       <div className="flex flex-col justify-center gap-2 p-6">
-        <h4 className="text-lg font-semibold text-card-foreground">
+        <h4
+          className={`text-lg font-semibold ${
+            green ? "text-emerald-100" : "text-card-foreground"
+          }`}
+        >
           {project.title}
         </h4>
-        <p className="text-sm font-medium text-orange-400">
+        <p
+          className={`text-sm font-medium ${
+            green ? "text-emerald-300" : "text-orange-400"
+          }`}
+        >
           {project.subtitle}
         </p>
-        <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
+        <p
+          className={`mt-1 text-sm leading-relaxed ${
+            green ? "text-emerald-50/85" : "text-muted-foreground"
+          }`}
+        >
           {project.description}
         </p>
         <ul className="mt-2 flex flex-wrap gap-2">
           {project.tags.map((tag) => (
             <li
               key={tag}
-              className="rounded-full border border-border bg-secondary px-3 py-1 text-xs font-medium text-muted-foreground"
+              className={`rounded-full border px-3 py-1 text-xs font-medium ${
+                green
+                  ? "border-emerald-300/40 bg-emerald-400/15 text-emerald-100"
+                  : "border-border bg-secondary text-muted-foreground"
+              }`}
             >
               {tag}
             </li>
