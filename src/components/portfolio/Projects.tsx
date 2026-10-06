@@ -117,6 +117,7 @@ const groups: Group[] = [
         description:
           "API REST para autenticação e gestão de usuários, com tokens JWT, validação de dados, testes automatizados e documentação de endpoints.",
         tags: ["Node.js", "JWT", "Zod"],
+        accent: "green",
       },
       {
         images: [projectPagamentos, projectPagamentos2, projectPagamentos3],
