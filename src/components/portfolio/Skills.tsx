@@ -1,4 +1,4 @@
-import { Github } from "lucide-react";
+import { Github, Medal } from "lucide-react";
 import lovableLogo from "@/assets/lovable-logo.jpg.asset.json";
 
 const backendSkills = [
