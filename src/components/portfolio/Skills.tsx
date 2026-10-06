@@ -116,6 +116,25 @@ export function Skills() {
               </div>
             </div>
 
+            <h3 className="mt-5 text-sm font-semibold text-card-foreground">
+              Certificados
+            </h3>
+            <ul className="mt-2 flex flex-wrap gap-3">
+              {["Cisco", "Cisco", "FIAP", "AWS"].map((name, i) => (
+                <li key={`${name}-${i}`} className="flex w-16 flex-col items-center gap-1">
+                  <span
+                    className="flex h-12 w-12 items-center justify-center rounded-full border border-border bg-secondary shadow-card"
+                    title={name}
+                  >
+                    <Medal className="h-5 w-5 text-orange-400" aria-hidden />
+                  </span>
+                  <span className="text-center text-[10px] font-medium leading-tight text-muted-foreground">
+                    {name}
+                  </span>
+                </li>
+              ))}
+            </ul>
+
             <a
               href="https://github.com/lecDados"
               target="_blank"
