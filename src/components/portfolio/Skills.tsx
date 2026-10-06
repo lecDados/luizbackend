@@ -2,6 +2,7 @@ import { Github, Trophy } from "lucide-react";
 import lovableLogo from "@/assets/lovable-logo.jpg.asset.json";
 import ciscoLogo from "@/assets/cisco-logo.png.asset.json";
 import fiapLogo from "@/assets/fiap-logo.png.asset.json";
+import awsCertLogo from "@/assets/aws-cert-logo.png.asset.json";
 
 const backendSkills = [
   "Node.js",
@@ -126,7 +127,7 @@ export function Skills() {
                 { name: "Cisco - Python 1", img: ciscoLogo.url },
                 { name: "Cisco - Python 2", img: ciscoLogo.url },
                 { name: "FIAP - IA", img: fiapLogo.url },
-                { name: "AWS - awsCode" },
+                { name: "AWS - awsCode", img: awsCertLogo.url },
               ].map((badge) => (
                   <li key={badge.name} className="flex w-16 flex-col items-center gap-1">
                     <span
