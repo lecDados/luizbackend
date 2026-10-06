@@ -34,6 +34,7 @@ type Project = {
   subtitle: string;
   description: string;
   tags: string[];
+  accent?: "green";
 };
 
 type Group = {
