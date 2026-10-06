@@ -1,4 +1,4 @@
-import { Github, Medal } from "lucide-react";
+import { Github, Trophy } from "lucide-react";
 import lovableLogo from "@/assets/lovable-logo.jpg.asset.json";
 
 const backendSkills = [
@@ -120,19 +120,21 @@ export function Skills() {
               Certificados
             </h3>
             <ul className="mt-2 flex flex-wrap gap-3">
-              {["Cisco", "Cisco", "FIAP", "AWS"].map((name, i) => (
-                <li key={`${name}-${i}`} className="flex w-16 flex-col items-center gap-1">
-                  <span
-                    className="flex h-12 w-12 items-center justify-center rounded-full border border-border bg-secondary shadow-card"
-                    title={name}
-                  >
-                    <Medal className="h-5 w-5 text-orange-400" aria-hidden />
-                  </span>
-                  <span className="text-center text-[10px] font-medium leading-tight text-muted-foreground">
-                    {name}
-                  </span>
-                </li>
-              ))}
+              {["Cisco - Python 1", "Cisco - Python 2", "FIAP - IA", "AWS - awsCode"].map(
+                (name) => (
+                  <li key={name} className="flex w-16 flex-col items-center gap-1">
+                    <span
+                      className="flex h-12 w-12 items-center justify-center rounded-full border border-border bg-secondary shadow-card"
+                      title={name}
+                    >
+                      <Trophy className="h-5 w-5 text-orange-400" aria-hidden />
+                    </span>
+                    <span className="text-center text-[10px] font-medium leading-tight text-muted-foreground">
+                      {name}
+                    </span>
+                  </li>
+                )
+              )}
             </ul>
 
             <a
