@@ -139,7 +139,15 @@ const groups: Group[] = [
   },
 ];
 
-function CardCarousel({ images, title }: { images: string[]; title: string }) {
+function CardCarousel({
+  images,
+  title,
+  accent,
+}: {
+  images: string[];
+  title: string;
+  accent?: Project["accent"];
+}) {
   const [index, setIndex] = useState(0);
 
   const prev = () =>
@@ -147,7 +155,13 @@ function CardCarousel({ images, title }: { images: string[]; title: string }) {
   const next = () => setIndex((i) => (i + 1) % images.length);
 
   return (
-    <div className="group/carousel relative w-full shrink-0 border-b border-border sm:w-64 sm:border-b-0 sm:border-r md:w-72">
+    <div
+      className={`group/carousel relative w-full shrink-0 sm:w-64 sm:border-b-0 sm:border-r md:w-72 ${
+        accent
+          ? "border-b border-emerald-300/30 sm:border-r-emerald-300/30"
+          : "border-b border-border sm:border-r"
+      }`}
+    >
       <div className="overflow-hidden">
         <div
           className="flex h-48 w-full sm:h-full"
