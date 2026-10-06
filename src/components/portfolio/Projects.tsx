@@ -217,7 +217,11 @@ function CardCarousel({
             onClick={() => setIndex(i)}
             aria-label={`Ir para imagem ${i + 1}`}
             className={`h-1.5 w-1.5 rounded-full transition-colors ${
-              i === index ? "bg-orange-400" : "bg-muted-foreground/50"
+              i === index
+                ? accent
+                  ? "bg-emerald-300"
+                  : "bg-orange-400"
+                : "bg-muted-foreground/50"
             }`}
           />
         ))}
@@ -227,25 +231,49 @@ function CardCarousel({
 }
 
 function ProjectCard({ project }: { project: Project }) {
+  const green = project.accent === "green";
+
   return (
-    <article className="flex flex-col overflow-hidden rounded-xl border border-border bg-card shadow-card transition-transform duration-300 hover:-translate-y-1 sm:flex-row">
-      <CardCarousel images={project.images} title={project.title} />
+    <article
+      className={`flex flex-col overflow-hidden rounded-xl border shadow-card transition-transform duration-300 hover:-translate-y-1 sm:flex-row ${
+        green
+          ? "border-emerald-300/40 bg-gradient-to-br from-emerald-400/20 via-emerald-500/10 to-emerald-900/20"
+          : "border-border bg-card"
+      }`}
+    >
+      <CardCarousel
+        images={project.images}
+        title={project.title}
+        accent={project.accent}
+      />
 
       <div className="flex flex-col justify-center gap-2 p-6">
-        <h4 className="text-lg font-semibold text-card-foreground">
+        <h4
+          className={`text-lg font-semibold ${
+            green ? "text-emerald-100" : "text-card-foreground"
+          }`}
+        >
           {project.title}
         </h4>
-        <p className="text-sm font-medium text-orange-400">
+        <p
+          className={`text-sm font-medium ${
+            green ? "text-emerald-300" : "text-orange-400"
+          }`}
+        >
           {project.subtitle}
         </p>
-        <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
+        <p className="mt-1 text-sm leading-relaxed text-emerald-50/85">
           {project.description}
         </p>
         <ul className="mt-2 flex flex-wrap gap-2">
           {project.tags.map((tag) => (
             <li
               key={tag}
-              className="rounded-full border border-border bg-secondary px-3 py-1 text-xs font-medium text-muted-foreground"
+              className={`rounded-full border px-3 py-1 text-xs font-medium ${
+                green
+                  ? "border-emerald-300/40 bg-emerald-400/15 text-emerald-100"
+                  : "border-border bg-secondary text-muted-foreground"
+              }`}
             >
               {tag}
             </li>
