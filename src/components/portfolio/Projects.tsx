@@ -188,7 +188,11 @@ function CardCarousel({
         type="button"
         onClick={prev}
         aria-label="Imagem anterior"
-        className="absolute left-2 top-1/2 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-full border border-border bg-background/80 text-muted-foreground shadow-card backdrop-blur-sm transition-colors hover:bg-secondary hover:text-foreground"
+        className={`absolute left-2 top-1/2 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-full shadow-card backdrop-blur-sm transition-colors ${
+          accent
+            ? "border border-emerald-300/40 bg-emerald-950/70 text-emerald-200 hover:bg-emerald-900/80 hover:text-emerald-100"
+            : "border border-border bg-background/80 text-muted-foreground hover:bg-secondary hover:text-foreground"
+        }`}
       >
         <ChevronLeft size={16} />
       </button>
@@ -196,7 +200,11 @@ function CardCarousel({
         type="button"
         onClick={next}
         aria-label="Próxima imagem"
-        className="absolute right-2 top-1/2 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-full border border-border bg-background/80 text-muted-foreground shadow-card backdrop-blur-sm transition-colors hover:bg-secondary hover:text-foreground"
+        className={`absolute right-2 top-1/2 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-full shadow-card backdrop-blur-sm transition-colors ${
+          accent
+            ? "border border-emerald-300/40 bg-emerald-950/70 text-emerald-200 hover:bg-emerald-900/80 hover:text-emerald-100"
+            : "border border-border bg-background/80 text-muted-foreground hover:bg-secondary hover:text-foreground"
+        }`}
       >
         <ChevronRight size={16} />
       </button>
