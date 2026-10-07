@@ -239,7 +239,7 @@ function ProjectCard({ project }: { project: Project }) {
     <article
       className={`flex flex-col overflow-hidden rounded-xl border shadow-card transition-transform duration-300 hover:-translate-y-1 sm:flex-row ${
         green
-          ? "border-transparent bg-gradient-to-br from-lime-400/15 via-lime-500/5 to-lime-900/10"
+          ? "border-transparent bg-gradient-to-br from-lime-300/35 via-lime-400/15 to-lime-900/15"
           : "border-border bg-card"
       }`}
     >
@@ -285,6 +285,17 @@ function ProjectCard({ project }: { project: Project }) {
             </li>
           ))}
         </ul>
+        {project.link && (
+          <a
+            href={project.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-4 inline-flex w-fit items-center justify-center gap-2 rounded-full bg-blue-500/90 px-5 py-2 text-sm font-semibold text-white shadow-card transition-colors hover:bg-blue-500"
+          >
+            Ver aplicação
+            <span aria-hidden>→</span>
+          </a>
+        )}
       </div>
     </article>
   );
