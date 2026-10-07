@@ -34,7 +34,7 @@ type Project = {
   subtitle: string;
   description: string;
   tags: string[];
-  accent?: "green";
+  accent?: "blue";
   link?: string;
 };
 
@@ -127,7 +127,7 @@ const groups: Group[] = [
           "JWT",
           "Zod",
         ],
-        accent: "green",
+        accent: "blue",
         link: "https://github.com/lecDados",
       },
       {
