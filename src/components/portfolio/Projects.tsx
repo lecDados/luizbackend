@@ -275,7 +275,7 @@ function ProjectCard({ project }: { project: Project }) {
               key={tag}
               className={`rounded-full border px-3 py-1 text-xs font-medium ${
                 green
-                  ? "border-emerald-300/40 bg-emerald-400/15 text-emerald-100"
+                  ? "border-lime-300/30 bg-lime-400/10 text-lime-100"
                   : "border-border bg-secondary text-muted-foreground"
               }`}
             >
