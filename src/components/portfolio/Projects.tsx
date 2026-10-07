@@ -261,21 +261,21 @@ function ProjectCard({ project }: { project: Project }) {
       <div className="flex flex-col justify-center gap-2 p-6">
         <h4
           className={`text-lg font-semibold ${
-            green ? "text-sky-100" : "text-card-foreground"
+            blue ? "text-sky-100" : "text-card-foreground"
           }`}
         >
           {project.title}
         </h4>
         <p
           className={`text-sm font-medium ${
-            green ? "text-sky-300" : "text-orange-400"
+            blue ? "text-sky-300" : "text-orange-400"
           }`}
         >
           {project.subtitle}
         </p>
         <p
           className={`mt-1 text-sm leading-relaxed ${
-            green ? "text-sky-50/85" : "text-muted-foreground"
+            blue ? "text-sky-50/85" : "text-muted-foreground"
           }`}
         >
           {project.description}
