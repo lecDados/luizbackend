@@ -201,7 +201,7 @@ function CardCarousel({
         aria-label="Imagem anterior"
         className={`absolute left-2 top-1/2 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-full shadow-card backdrop-blur-sm transition-colors ${
           accent
-            ? "border border-transparent bg-background/80 text-lime-300 hover:bg-secondary hover:text-lime-200"
+            ? "border border-transparent bg-background/80 text-sky-300 hover:bg-secondary hover:text-sky-200"
             : "border border-border bg-background/80 text-muted-foreground hover:bg-secondary hover:text-foreground"
         }`}
       >
@@ -213,7 +213,7 @@ function CardCarousel({
         aria-label="Próxima imagem"
         className={`absolute right-2 top-1/2 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-full shadow-card backdrop-blur-sm transition-colors ${
           accent
-            ? "border border-transparent bg-background/80 text-lime-300 hover:bg-secondary hover:text-lime-200"
+            ? "border border-transparent bg-background/80 text-sky-300 hover:bg-secondary hover:text-sky-200"
             : "border border-border bg-background/80 text-muted-foreground hover:bg-secondary hover:text-foreground"
         }`}
       >
@@ -230,7 +230,7 @@ function CardCarousel({
             className={`h-1.5 w-1.5 rounded-full transition-colors ${
               i === index
                 ? accent
-                  ? "bg-lime-300"
+                  ? "bg-sky-300"
                   : "bg-orange-400"
                 : "bg-muted-foreground/50"
             }`}
@@ -242,13 +242,13 @@ function CardCarousel({
 }
 
 function ProjectCard({ project }: { project: Project }) {
-  const green = project.accent === "green";
+  const blue = project.accent === "blue";
 
   return (
     <article
       className={`flex flex-col overflow-hidden rounded-xl border shadow-card transition-transform duration-300 hover:-translate-y-1 sm:flex-row ${
-        green
-          ? "border-transparent bg-gradient-to-br from-lime-300/35 via-lime-400/15 to-lime-900/15"
+        blue
+          ? "border-transparent bg-gradient-to-br from-sky-300/35 via-sky-400/15 to-sky-900/15"
           : "border-border bg-card"
       }`}
     >
@@ -261,21 +261,21 @@ function ProjectCard({ project }: { project: Project }) {
       <div className="flex flex-col justify-center gap-2 p-6">
         <h4
           className={`text-lg font-semibold ${
-            green ? "text-lime-100" : "text-card-foreground"
+            green ? "text-sky-100" : "text-card-foreground"
           }`}
         >
           {project.title}
         </h4>
         <p
           className={`text-sm font-medium ${
-            green ? "text-lime-300" : "text-orange-400"
+            green ? "text-sky-300" : "text-orange-400"
           }`}
         >
           {project.subtitle}
         </p>
         <p
           className={`mt-1 text-sm leading-relaxed ${
-            green ? "text-lime-50/85" : "text-muted-foreground"
+            green ? "text-sky-50/85" : "text-muted-foreground"
           }`}
         >
           {project.description}
@@ -286,7 +286,7 @@ function ProjectCard({ project }: { project: Project }) {
               key={tag}
               className={`rounded-full border px-3 py-1 text-xs font-medium ${
                 green
-                  ? "border-lime-300/30 bg-lime-400/10 text-lime-100"
+                  ? "border-sky-300/30 bg-sky-400/10 text-sky-100"
                   : "border-border bg-secondary text-muted-foreground"
               }`}
             >
