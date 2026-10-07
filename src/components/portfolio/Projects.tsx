@@ -185,19 +185,25 @@ function CardCarousel({
           }}
         >
           {images.map((src, i) => (
-            <img
+            <a
               key={src}
-              src={src}
-              alt={`${title} — imagem ${i + 1}`}
-              loading="lazy"
-              width={992}
-              height={672}
-              className={`h-48 w-full shrink-0 sm:h-full ${
-                accent
-                  ? "object-contain bg-slate-950"
-                  : "object-cover"
-              }`}
-            />
+              href={src}
+              target="_blank"
+              rel="noopener noreferrer"
+              title="Abrir imagem em tela cheia"
+              className="block h-48 w-full shrink-0 sm:h-full"
+            >
+              <img
+                src={src}
+                alt={`${title} — imagem ${i + 1}`}
+                loading="lazy"
+                width={992}
+                height={672}
+                className={`h-full w-full ${
+                  accent ? "object-contain bg-slate-950" : "object-cover"
+                }`}
+              />
+            </a>
           ))}
         </div>
       </div>
