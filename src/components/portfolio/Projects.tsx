@@ -35,6 +35,7 @@ type Project = {
   description: string;
   tags: string[];
   accent?: "green";
+  link?: string;
 };
 
 type Group = {
@@ -118,6 +119,7 @@ const groups: Group[] = [
           "API REST para autenticação e gestão de usuários, com tokens JWT, validação de dados, testes automatizados e documentação de endpoints.",
         tags: ["Node.js", "JWT", "Zod"],
         accent: "green",
+        link: "https://github.com/lecDados",
       },
       {
         images: [projectPagamentos, projectPagamentos2, projectPagamentos3],
