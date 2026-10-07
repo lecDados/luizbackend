@@ -6,9 +6,12 @@ import projectBtc3 from "@/assets/project-btc-3.jpg";
 import projectDecoradora from "@/assets/project-decoradora.jpg";
 import projectDecoradora2 from "@/assets/project-decoradora-2.jpg";
 import projectDecoradora3 from "@/assets/project-decoradora-3.jpg";
-import projectApi from "@/assets/project-api.jpg";
-import projectApi2 from "@/assets/project-api-2.jpg";
-import projectApi3 from "@/assets/project-api-3.jpg";
+import apiAuthTelegramAsset from "@/assets/api-auth-telegram.png.asset.json";
+import apiAuthSite1Asset from "@/assets/api-auth-site-1.png.asset.json";
+import apiAuthSite2Asset from "@/assets/api-auth-site-2.png.asset.json";
+const apiAuthTelegram = apiAuthTelegramAsset.url;
+const apiAuthSite1 = apiAuthSite1Asset.url;
+const apiAuthSite2 = apiAuthSite2Asset.url;
 import projectEstoque from "@/assets/project-estoque.jpg";
 import projectEstoque2 from "@/assets/project-estoque-2.jpg";
 import projectEstoque3 from "@/assets/project-estoque-3.jpg";
@@ -112,7 +115,7 @@ const groups: Group[] = [
     carousel: true,
     projects: [
       {
-        images: [projectApi, projectApi2, projectApi3],
+        images: [apiAuthTelegram, apiAuthSite1, apiAuthSite2],
         title: "API de Autenticação",
         subtitle: "Serviço back-end",
         description:
@@ -189,7 +192,11 @@ function CardCarousel({
               loading="lazy"
               width={992}
               height={672}
-              className="h-48 w-full shrink-0 object-cover sm:h-full"
+              className={`h-48 w-full shrink-0 sm:h-full ${
+                accent
+                  ? "object-contain bg-slate-950"
+                  : "object-cover"
+              }`}
             />
           ))}
         </div>
