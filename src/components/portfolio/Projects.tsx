@@ -200,7 +200,7 @@ function CardCarousel({
                 width={992}
                 height={672}
                 className={`h-full w-full ${
-                  accent ? "object-contain bg-slate-950" : "object-cover"
+                  accent ? "object-cover bg-slate-950" : "object-cover"
                 }`}
               />
             </a>
