@@ -237,7 +237,7 @@ function ProjectCard({ project }: { project: Project }) {
     <article
       className={`flex flex-col overflow-hidden rounded-xl border shadow-card transition-transform duration-300 hover:-translate-y-1 sm:flex-row ${
         green
-          ? "border-emerald-300/40 bg-gradient-to-br from-emerald-400/20 via-emerald-500/10 to-emerald-900/20"
+          ? "border-transparent bg-gradient-to-br from-lime-400/15 via-lime-500/5 to-lime-900/10"
           : "border-border bg-card"
       }`}
     >
@@ -250,21 +250,21 @@ function ProjectCard({ project }: { project: Project }) {
       <div className="flex flex-col justify-center gap-2 p-6">
         <h4
           className={`text-lg font-semibold ${
-            green ? "text-emerald-100" : "text-card-foreground"
+            green ? "text-lime-100" : "text-card-foreground"
           }`}
         >
           {project.title}
         </h4>
         <p
           className={`text-sm font-medium ${
-            green ? "text-emerald-300" : "text-orange-400"
+            green ? "text-lime-300" : "text-orange-400"
           }`}
         >
           {project.subtitle}
         </p>
         <p
           className={`mt-1 text-sm leading-relaxed ${
-            green ? "text-emerald-50/85" : "text-muted-foreground"
+            green ? "text-lime-50/85" : "text-muted-foreground"
           }`}
         >
           {project.description}
@@ -275,7 +275,7 @@ function ProjectCard({ project }: { project: Project }) {
               key={tag}
               className={`rounded-full border px-3 py-1 text-xs font-medium ${
                 green
-                  ? "border-emerald-300/40 bg-emerald-400/15 text-emerald-100"
+                  ? "border-lime-300/30 bg-lime-400/10 text-lime-100"
                   : "border-border bg-secondary text-muted-foreground"
               }`}
             >
