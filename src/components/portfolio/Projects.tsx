@@ -285,7 +285,7 @@ function ProjectCard({ project }: { project: Project }) {
             <li
               key={tag}
               className={`rounded-full border px-3 py-1 text-xs font-medium ${
-                green
+                blue
                   ? "border-sky-300/30 bg-sky-400/10 text-sky-100"
                   : "border-border bg-secondary text-muted-foreground"
               }`}
