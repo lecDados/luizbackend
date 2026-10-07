@@ -117,7 +117,16 @@ const groups: Group[] = [
         subtitle: "Serviço back-end",
         description:
           "API REST para autenticação e gestão de usuários, com tokens JWT, validação de dados, testes automatizados e documentação de endpoints.",
-        tags: ["Node.js", "JWT", "Zod"],
+        tags: [
+          "Node.js",
+          "Express",
+          "API Mercado Livre",
+          "API Telegram",
+          "Oracle",
+          "Linux",
+          "JWT",
+          "Zod",
+        ],
         accent: "green",
         link: "https://github.com/lecDados",
       },
