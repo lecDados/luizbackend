@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import projectBtc from "@/assets/project-btc.jpg";
 import projectBtc2 from "@/assets/project-btc-2.jpg";
 import projectBtc3 from "@/assets/project-btc-3.jpg";
@@ -37,7 +38,7 @@ type Project = {
   subtitle: string;
   description: string;
   tags: string[];
-  accent?: "blue";
+  accent?: "blue" | "yellow";
   link?: string;
 };
 
@@ -60,6 +61,7 @@ const groups: Group[] = [
         description:
           "Aplicação web para acompanhamento de carteiras de criptomoedas, com gráficos em tempo real, histórico de operações e cálculo de rentabilidade.",
         tags: ["Node.js", "Express", "MySQL"],
+        accent: "yellow",
       },
       {
         images: [projectEstoque, projectEstoque2, projectEstoque3],
@@ -150,139 +152,62 @@ const groups: Group[] = [
 function CardCarousel({
   images,
   title,
-  accent,
 }: {
   images: string[];
   title: string;
-  accent?: Project["accent"];
 }) {
   const [index, setIndex] = useState(0);
-
-  const prev = () =>
-    setIndex((i) => (i - 1 + images.length) % images.length);
-  const next = () => setIndex((i) => (i + 1) % images.length);
+  const remaining = images.map((src, i) => ({ src, i })).filter((image) => image.i !== index);
 
   return (
-    <div
-      className={`group/carousel relative w-full shrink-0 sm:w-64 sm:border-b-0 sm:border-r md:w-72 ${
-        accent
-          ? "border-b border-transparent sm:border-r-transparent"
-          : "border-b border-border sm:border-r"
-      }`}
-    >
-      <div className="overflow-hidden">
-        <div
-          className="flex h-48 w-full sm:h-full"
-          style={{
-            transform: `translateX(-${index * 100}%)`,
-            transition: "transform 400ms ease-out",
-          }}
-        >
-          {images.map((src, i) => (
-            <a
-              key={src}
-              href={src}
-              target="_blank"
-              rel="noopener noreferrer"
-              title="Abrir imagem em tela cheia"
-              className="block h-48 w-full shrink-0 sm:h-full"
-            >
-              <img
-                src={src}
-                alt={`${title} — imagem ${i + 1}`}
-                loading="lazy"
-                width={992}
-                height={672}
-                className={`h-full w-full ${
-                  accent ? "object-cover bg-slate-950" : "object-cover"
-                }`}
-              />
-            </a>
-          ))}
-        </div>
-      </div>
-
-      <button
-        type="button"
-        onClick={prev}
-        aria-label="Imagem anterior"
-        className={`absolute left-2 top-1/2 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-full shadow-card backdrop-blur-sm transition-colors ${
-          accent
-            ? "border border-transparent bg-background/80 text-sky-300 hover:bg-secondary hover:text-sky-200"
-            : "border border-border bg-background/80 text-muted-foreground hover:bg-secondary hover:text-foreground"
-        }`}
-      >
-        <ChevronLeft size={16} />
-      </button>
-      <button
-        type="button"
-        onClick={next}
-        aria-label="Próxima imagem"
-        className={`absolute right-2 top-1/2 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-full shadow-card backdrop-blur-sm transition-colors ${
-          accent
-            ? "border border-transparent bg-background/80 text-sky-300 hover:bg-secondary hover:text-sky-200"
-            : "border border-border bg-background/80 text-muted-foreground hover:bg-secondary hover:text-foreground"
-        }`}
-      >
-        <ChevronRight size={16} />
-      </button>
-
-      <div className="absolute bottom-2 left-1/2 flex -translate-x-1/2 gap-1.5">
-        {images.map((src, i) => (
-          <button
-            key={src}
-            type="button"
-            onClick={() => setIndex(i)}
-            aria-label={`Ir para imagem ${i + 1}`}
-            className={`h-1.5 w-1.5 rounded-full transition-colors ${
-              i === index
-                ? accent
-                  ? "bg-sky-300"
-                  : "bg-orange-400"
-                : "bg-muted-foreground/50"
-            }`}
-          />
-        ))}
-      </div>
+    <div className="grid aspect-[4/3] min-w-0 grid-cols-[2fr_1fr] grid-rows-2 gap-2 bg-background p-2 md:aspect-[3/2] md:min-h-80">
+      <a href={images[index]} target="_blank" rel="noopener noreferrer" title="Abrir imagem em tela cheia" className="row-span-2 block min-h-0 min-w-0 overflow-hidden rounded-md">
+        <img src={images[index]} alt={`${title} — imagem ${index + 1}`} loading="lazy" width={992} height={672} className="h-full w-full object-cover" />
+      </a>
+      {remaining.map(({ src, i }) => (
+        <Button key={src} variant="ghost" onClick={() => setIndex(i)} aria-label={`Ampliar imagem ${i + 1} de ${title}`} className="h-full min-h-0 min-w-0 overflow-hidden rounded-md p-0 focus-visible:ring-inset">
+          <img src={src} alt={`${title} — imagem ${i + 1}`} loading="lazy" width={992} height={672} className="h-full w-full object-cover" />
+        </Button>
+      ))}
     </div>
   );
 }
 
 function ProjectCard({ project }: { project: Project }) {
   const blue = project.accent === "blue";
+  const yellow = project.accent === "yellow";
 
   return (
     <article
-      className={`flex flex-col overflow-hidden rounded-xl border shadow-card transition-transform duration-300 hover:-translate-y-1 sm:flex-row ${
-        blue
-          ? "border-transparent bg-gradient-to-br from-sky-300/35 via-sky-400/15 to-sky-900/15"
+      className={`grid overflow-hidden rounded-xl border shadow-card md:grid-cols-[3fr_2fr] ${
+        yellow ? "border-transparent bg-project-yellow text-project-yellow-foreground" : blue
+          ? "border-transparent bg-project-blue"
           : "border-border bg-card"
       }`}
     >
       <CardCarousel
         images={project.images}
         title={project.title}
-        accent={project.accent}
       />
 
-      <div className="flex flex-col justify-center gap-2 p-6">
+      <div className="flex min-w-0 flex-col justify-center gap-2 p-5 md:p-6">
         <h4
           className={`text-lg font-semibold ${
-            blue ? "text-sky-100" : "text-card-foreground"
+            yellow ? "text-project-yellow-foreground" : blue ? "text-project-blue-foreground" : "text-card-foreground"
           }`}
         >
           {project.title}
         </h4>
         <p
           className={`text-sm font-medium ${
-            blue ? "text-sky-300" : "text-orange-400"
+            yellow ? "text-project-yellow-muted" : blue ? "text-project-blue-muted" : "text-project-highlight"
           }`}
         >
           {project.subtitle}
         </p>
         <p
           className={`mt-1 text-sm leading-relaxed ${
-            blue ? "text-sky-50/85" : "text-muted-foreground"
+            yellow ? "text-project-yellow-muted" : blue ? "text-project-blue-foreground/85" : "text-muted-foreground"
           }`}
         >
           {project.description}
@@ -292,8 +217,8 @@ function ProjectCard({ project }: { project: Project }) {
             <li
               key={tag}
               className={`rounded-full border px-3 py-1 text-xs font-medium ${
-                blue
-                  ? "border-sky-300/30 bg-sky-400/10 text-sky-100"
+                yellow ? "border-transparent bg-project-yellow-tag text-project-yellow-foreground" : blue
+                  ? "border-project-blue-muted/30 bg-project-blue-muted/10 text-project-blue-foreground"
                   : "border-border bg-secondary text-muted-foreground"
               }`}
             >
