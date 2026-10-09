@@ -109,7 +109,7 @@ const groups: Group[] = [
     carousel: true,
     projects: [
       {
-        images: [apiAuthTelegram, apiAuthSite1, apiAuthSite2],
+        images: [apiAuthSite1, apiAuthTelegram, apiAuthSite2],
         title: "API de Autenticação",
         subtitle: "Serviço back-end",
         description:
