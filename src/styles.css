@@ -58,6 +58,9 @@
 }
 
 :root {
+  --flow-strand: oklch(0.78 0.025 85 / 0.22);
+  --flow-accent: oklch(0.76 0.09 65 / 0.3);
+  --flow-depth: oklch(0.04 0.005 270 / 0.18);
   --project-yellow: oklch(0.89 0.14 95);
   --project-yellow-foreground: oklch(0.23 0.035 90);
   --project-yellow-muted: oklch(0.36 0.045 90);
@@ -213,4 +216,29 @@ a[href*="lovable.dev/projects"] {
 /* Texto/ícone dos cards perolados — tons escuros para contraste sobre degradês claros */
 .pearl-label {
   color: oklch(0.22 0.02 270);
+}
+
+.portfolio-flow-lines {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 20;
+  overflow: hidden;
+  pointer-events: none;
+  fill: none;
+  stroke-linecap: round;
+}
+
+.portfolio-flow-strand,
+.portfolio-flow-accent {
+  stroke-width: 0.7;
+  vector-effect: non-scaling-stroke;
+}
+.portfolio-flow-strand { stroke: var(--flow-strand); }
+.portfolio-flow-accent { stroke: var(--flow-accent); }
+.portfolio-flow-depth {
+  stroke: var(--flow-depth);
+  stroke-width: 2.4;
+  vector-effect: non-scaling-stroke;
 }
