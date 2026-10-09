@@ -29,8 +29,8 @@ export function HeroIntro() {
   }, []);
 
   return (
-    <section className="w-full border-b border-border min-h-screen flex flex-col justify-center pt-16 pb-24 md:pt-12 md:pb-24">
-      <div className="mx-auto w-full max-w-[1200px] px-6">
+    <section className="flex min-h-[100svh] w-full flex-col border-b border-border pt-16 pb-10 md:pb-24">
+      <div className="mx-auto flex w-full max-w-[1200px] flex-1 flex-col px-6 md:justify-center md:py-12">
         <p className="font-mono text-xs uppercase tracking-[0.3em] text-orange-400">
           Backend &amp; Automação
         </p>
@@ -58,7 +58,7 @@ export function HeroIntro() {
           integrados às suas APIs, bancos de dados e regras de negócio.
         </p>
 
-        <div className="mt-10 flex flex-wrap items-center gap-3">
+        <div className="mt-auto flex flex-wrap items-center gap-3 pt-12 md:mt-10 md:pt-0">
           <a
             href="#projects"
             className="inline-flex items-center justify-center rounded-md bg-orange-500 px-5 py-2.5 text-sm font-semibold text-neutral-950 transition-colors hover:bg-orange-400"
