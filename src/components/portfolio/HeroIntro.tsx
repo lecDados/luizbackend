@@ -1,5 +1,7 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
+import macbookMockup from "@/assets/macbook-google-site.png";
+import phoneMockup from "@/assets/smartphone-google-site.png";
 
 const HEADLINE = "Web sites, sistemas de automação e Agentes-AI";
 
@@ -57,6 +59,27 @@ export function HeroIntro() {
           fluxos de automação que eliminam trabalho repetitivo e agentes de IA
           integrados às suas APIs, bancos de dados e regras de negócio.
         </p>
+
+        <div className="mt-6 flex w-full justify-center md:mt-8 md:justify-start">
+          <div className="relative h-40 w-[240px] shrink-0 sm:h-48 sm:w-[288px] md:h-56 md:w-[336px] lg:h-64 lg:w-[384px]">
+            <img
+              src={macbookMockup}
+              alt="Notebook mostrando o desenho de um site com a logo do Google na tela"
+              width={1200}
+              height={800}
+              loading="lazy"
+              className="absolute inset-0 h-full w-full object-contain drop-shadow-2xl"
+            />
+            <img
+              src={phoneMockup}
+              alt="Smartphone mostrando o mesmo site com a logo do Google"
+              width={768}
+              height={1536}
+              loading="lazy"
+              className="absolute -right-4 bottom-0 h-[80%] w-auto object-contain drop-shadow-2xl sm:-right-8"
+            />
+          </div>
+        </div>
 
         <div className="mt-auto flex flex-wrap items-center gap-3 pt-12 md:mt-10 md:pt-0">
           <a
