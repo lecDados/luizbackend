@@ -61,7 +61,7 @@ export function HeroIntro() {
         </p>
 
         <div className="mt-6 flex w-full justify-center md:mt-8 md:justify-start">
-          <div className="relative h-40 w-[240px] shrink-0 sm:h-48 sm:w-[288px] md:h-56 md:w-[336px] lg:h-64 lg:w-[384px]">
+          <div data-flow-origin className="relative h-40 w-[240px] shrink-0 sm:h-48 sm:w-[288px] md:h-56 md:w-[336px] lg:h-64 lg:w-[384px]">
             <img
               src={macbookMockup}
               alt="Notebook mostrando o desenho de um site com a logo do Google na tela"

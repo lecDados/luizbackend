@@ -8,6 +8,7 @@ import { Skills } from "@/components/portfolio/Skills";
 import { Contact } from "@/components/portfolio/Contact";
 import { Footer } from "@/components/portfolio/Footer";
 import { CodeBackground } from "@/components/portfolio/CodeBackground";
+import { FlowLines } from "@/components/portfolio/FlowLines";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -48,6 +49,7 @@ function Portfolio() {
 
       </main>
       <Footer />
+      <FlowLines />
     </div>
   );
 }
