@@ -50,7 +50,7 @@ type Group = {
 
 const groups: Group[] = [
   {
-    category: "Back-end",
+    category: "Projetos finalizados",
     carousel: true,
     projects: [
       {
@@ -77,12 +77,6 @@ const groups: Group[] = [
           "Plataforma de automação de mensagens para WhatsApp e Telegram, com fluxos configuráveis, respostas automáticas por IA e painel de estatísticas.",
         tags: ["Node.js", "OpenAI", "Redis"],
       },
-    ],
-  },
-  {
-    category: "Front-end",
-    carousel: true,
-    projects: [
       {
         images: [projectDecoradora, projectDecoradora2, projectDecoradora3],
         title: "Website para Decoradora de Festas",
