@@ -8,3 +8,5 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+- All project cards share a responsive three-image gallery with selectable thumbnails, so image presentation stays consistent across categories.

@@ -32,6 +32,14 @@
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
+  --color-project-yellow: var(--project-yellow);
+  --color-project-yellow-foreground: var(--project-yellow-foreground);
+  --color-project-yellow-muted: var(--project-yellow-muted);
+  --color-project-yellow-tag: var(--project-yellow-tag);
+  --color-project-blue: var(--project-blue);
+  --color-project-blue-foreground: var(--project-blue-foreground);
+  --color-project-blue-muted: var(--project-blue-muted);
+  --color-project-highlight: var(--project-highlight);
   --color-ring-offset-background: var(--background);
   --color-chart-1: var(--chart-1);
   --color-chart-2: var(--chart-2);
@@ -50,6 +58,14 @@
 }
 
 :root {
+  --project-yellow: oklch(0.89 0.14 95);
+  --project-yellow-foreground: oklch(0.23 0.035 90);
+  --project-yellow-muted: oklch(0.36 0.045 90);
+  --project-yellow-tag: oklch(0.95 0.08 95);
+  --project-blue: oklch(0.31 0.07 240);
+  --project-blue-foreground: oklch(0.96 0.025 240);
+  --project-blue-muted: oklch(0.81 0.07 240);
+  --project-highlight: oklch(0.7 0.15 55);
   --radius: 0.625rem;
   --background: oklch(0.1 0.005 270);
   --foreground: oklch(0.95 0.005 270);
