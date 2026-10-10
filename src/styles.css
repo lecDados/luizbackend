@@ -40,6 +40,9 @@
   --color-project-blue-foreground: var(--project-blue-foreground);
   --color-project-blue-muted: var(--project-blue-muted);
   --color-project-highlight: var(--project-highlight);
+  --color-footer-surface: var(--footer-surface);
+  --color-footer-edge: var(--footer-edge);
+  --color-footer-muted: var(--footer-muted);
   --color-ring-offset-background: var(--background);
   --color-chart-1: var(--chart-1);
   --color-chart-2: var(--chart-2);
