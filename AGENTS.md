@@ -10,4 +10,4 @@
 <!-- LOVABLE:END -->
 
 - All project cards share a responsive three-image gallery with selectable thumbnails, so image presentation stays consistent across categories.
-- Page-spanning decorative lines use a pointer-transparent SVG measured with ResizeObserver and anchored to the device artwork, keeping the effect aligned without scroll listeners.
+- Page-spanning decorative lines use a pointer-transparent SVG measured with ResizeObserver and anchored to the device artwork, in an isolated layer below main and footer; deterministic routes avoid jumps on resize without scroll listeners.
