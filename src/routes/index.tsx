@@ -37,9 +37,10 @@ export const Route = createFileRoute("/")({
 
 function Portfolio() {
   return (
-    <div className="relative min-h-screen bg-background text-foreground">
+    <div className="portfolio-page relative isolate min-h-screen bg-background text-foreground">
       <CodeBackground />
-      <main>
+      <FlowLines />
+      <main className="relative z-10">
         <Hero />
         <Solutions />
         <Services />
@@ -49,7 +50,6 @@ function Portfolio() {
 
       </main>
       <Footer />
-      <FlowLines />
     </div>
   );
 }

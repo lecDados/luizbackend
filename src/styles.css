@@ -58,8 +58,10 @@
 }
 
 :root {
-  --flow-strand: oklch(0.78 0.025 85 / 0.22);
-  --flow-accent: oklch(0.76 0.09 65 / 0.3);
+  --flow-strand: oklch(0.72 0.18 55 / 0.55);
+  --flow-accent: oklch(0.78 0.17 65 / 0.85);
+  --flow-secondary: oklch(0.8 0.14 80 / 0.65);
+  --flow-tertiary: oklch(0.68 0.2 40 / 0.65);
   --flow-depth: oklch(0.04 0.005 270 / 0.18);
   --project-yellow: oklch(0.89 0.14 95);
   --project-yellow-foreground: oklch(0.23 0.035 90);
@@ -223,7 +225,7 @@ a[href*="lovable.dev/projects"] {
   inset: 0;
   width: 100%;
   height: 100%;
-  z-index: 20;
+  z-index: 0;
   overflow: hidden;
   pointer-events: none;
   fill: none;
@@ -242,3 +244,15 @@ a[href*="lovable.dev/projects"] {
   stroke-width: 2.4;
   vector-effect: non-scaling-stroke;
 }
+
+.portfolio-flow-ribbon-1 .portfolio-flow-strand,
+.portfolio-flow-ribbon-1 .portfolio-flow-accent {
+  stroke: var(--flow-secondary);
+  stroke-width: 0.9;
+}
+.portfolio-flow-ribbon-2 .portfolio-flow-strand,
+.portfolio-flow-ribbon-2 .portfolio-flow-accent {
+  stroke: var(--flow-tertiary);
+  stroke-width: 1.2;
+}
+.portfolio-page > footer { z-index: 10; }
