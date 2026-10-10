@@ -40,6 +40,9 @@
   --color-project-blue-foreground: var(--project-blue-foreground);
   --color-project-blue-muted: var(--project-blue-muted);
   --color-project-highlight: var(--project-highlight);
+  --color-footer-surface: var(--footer-surface);
+  --color-footer-edge: var(--footer-edge);
+  --color-footer-muted: var(--footer-muted);
   --color-ring-offset-background: var(--background);
   --color-chart-1: var(--chart-1);
   --color-chart-2: var(--chart-2);
@@ -72,6 +75,9 @@
   --project-blue-muted: oklch(0.81 0.07 240);
   --project-highlight: oklch(0.7 0.15 55);
   --radius: 0.625rem;
+  --footer-surface: oklch(0.035 0.004 270);
+  --footer-edge: oklch(0.11 0.005 270);
+  --footer-muted: oklch(0.72 0.01 270);
   --background: oklch(0.1 0.005 270);
   --foreground: oklch(0.95 0.005 270);
   --card: oklch(0.14 0.005 270);
@@ -107,6 +113,9 @@
 }
 
 .dark {
+  --footer-surface: oklch(0.035 0.004 270);
+  --footer-edge: oklch(0.11 0.005 270);
+  --footer-muted: oklch(0.72 0.01 270);
   --background: oklch(0.1 0.005 270);
   --foreground: oklch(0.95 0.005 270);
   --card: oklch(0.14 0.005 270);

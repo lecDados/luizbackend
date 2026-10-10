@@ -1,3 +1,5 @@
+import { ArrowUp } from "lucide-react";
+
 const rows = [
   {
     direction: "left" as const,
@@ -49,7 +51,7 @@ function Marquee() {
   return (
     <div
       aria-hidden
-      className="pointer-events-none absolute inset-0 z-0 flex items-center overflow-hidden blur-[2px]"
+      className="pointer-events-none absolute inset-0 z-0 flex items-center overflow-hidden opacity-25 blur-[2px]"
     >
       <div className="flex flex-col gap-3">
         {rows.map((row, rowIndex) => (
@@ -93,15 +95,30 @@ function Marquee() {
 }
 
 export function Footer() {
+  const goToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
-    <footer className="relative overflow-hidden border-t border-border bg-black px-6 py-10">
+    <footer className="relative overflow-hidden border-t border-footer-edge bg-footer-surface px-6 py-12">
       <Marquee />
-      <div className="relative z-10 mx-auto max-w-[1200px]">
-        <p className="text-lg font-semibold text-foreground">Luiz Eduardo</p>
-        <p className="text-sm font-medium text-orange-400">Backend Developer</p>
-        <p className="mt-4 text-xs text-muted-foreground">
-          Designed and developed by Luiz Eduardo.
-        </p>
+      <div className="relative z-10 mx-auto flex max-w-[1200px] flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
+        <div className="w-full rounded-xl bg-footer-surface px-5 py-4 shadow-card sm:w-auto">
+          <p className="text-xl font-semibold tracking-tight text-foreground">Luiz Eduardo</p>
+          <p className="text-sm font-medium text-project-highlight">Backend Developer</p>
+          <p className="mt-4 text-xs text-footer-muted">
+            Designed and developed by Luiz Eduardo.
+          </p>
+        </div>
+        <button
+          type="button"
+          onClick={goToTop}
+          aria-label="Voltar ao topo da página"
+          className="inline-flex items-center gap-2 self-start rounded-full border border-footer-edge bg-secondary px-4 py-2 text-xs font-semibold uppercase tracking-wide text-secondary-foreground transition-colors hover:bg-accent sm:self-auto"
+        >
+          <ArrowUp size={14} />
+          Topo
+        </button>
       </div>
     </footer>
   );
