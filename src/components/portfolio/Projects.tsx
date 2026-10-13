@@ -1,30 +1,21 @@
 import { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import projectBtc from "@/assets/project-btc.jpg";
-import projectBtc2 from "@/assets/project-btc-2.jpg";
-import projectBtc3 from "@/assets/project-btc-3.jpg";
-import projectDecoradora from "@/assets/project-decoradora.jpg";
-import projectDecoradora2 from "@/assets/project-decoradora-2.jpg";
-import projectDecoradora3 from "@/assets/project-decoradora-3.jpg";
+import inventoryProject from "@/assets/inventory-project.jpg";
+import oficinaMoto from "@/assets/oficina-moto.jpg";
+import automacaoPlanilhas from "@/assets/automacao-planilhas.jpg";
+import projectEstoque from "@/assets/project-estoque.jpg";
+import projectPainel from "@/assets/project-painel.jpg";
+import projetoPi from "@/assets/projeto-pi.jpg";
+import projectBot from "@/assets/project-bot.jpg";
+import projectBot2 from "@/assets/project-bot-2.jpg";
+import projectBot3 from "@/assets/project-bot-3.jpg";
 import apiAuthTelegramAsset from "@/assets/api-auth-telegram.png.asset.json";
 import apiAuthSite1Asset from "@/assets/api-auth-site-1.png.asset.json";
 import apiAuthSite2Asset from "@/assets/api-auth-site-2.png.asset.json";
 const apiAuthTelegram = apiAuthTelegramAsset.url;
 const apiAuthSite1 = apiAuthSite1Asset.url;
 const apiAuthSite2 = apiAuthSite2Asset.url;
-import projectEstoque from "@/assets/project-estoque.jpg";
-import projectEstoque2 from "@/assets/project-estoque-2.jpg";
-import projectEstoque3 from "@/assets/project-estoque-3.jpg";
-import projectBot from "@/assets/project-bot.jpg";
-import projectBot2 from "@/assets/project-bot-2.jpg";
-import projectBot3 from "@/assets/project-bot-3.jpg";
-import projectLoja from "@/assets/project-loja.jpg";
-import projectLoja2 from "@/assets/project-loja-2.jpg";
-import projectLoja3 from "@/assets/project-loja-3.jpg";
-import projectPainel from "@/assets/project-painel.jpg";
-import projectPainel2 from "@/assets/project-painel-2.jpg";
-import projectPainel3 from "@/assets/project-painel-3.jpg";
 import projectPagamentos from "@/assets/project-pagamentos.jpg";
 import projectPagamentos2 from "@/assets/project-pagamentos-2.jpg";
 import projectPagamentos3 from "@/assets/project-pagamentos-3.jpg";
@@ -55,53 +46,39 @@ const groups: Group[] = [
     carousel: true,
     projects: [
       {
-        images: [projectBtc, projectBtc2, projectBtc3],
-        title: "Painel de Investimento em BTC",
-        subtitle: "Dashboard financeiro",
+        images: [inventoryProject, oficinaMoto, automacaoPlanilhas],
+        title: "Sistema para fluxo de caixa e controle estoque para barbearia",
+        subtitle: "Gestão financeira e de estoque",
         description:
-          "Aplicação web para acompanhamento de carteiras de criptomoedas, com gráficos em tempo real, histórico de operações e cálculo de rentabilidade.",
-        tags: ["Node.js", "Express", "MySQL"],
+          "Sistema para barbearias com controle de fluxo de caixa e gestão de estoque, registrando entradas, saídas, produtos e relatórios de movimentação.",
+        tags: ["Node.js", "Express", "APIs", "React", "JavaScript"],
         accent: "yellow",
       },
       {
-        images: [projectEstoque, projectEstoque2, projectEstoque3],
-        title: "Sistema de Controle de Estoque",
-        subtitle: "Gestão de inventário",
+        images: [projectEstoque, projectPainel, projetoPi],
+        title: "Sistema para controle de atendimento para oficina de moto com ordem de serviço e controle de estoque",
+        subtitle: "Ordens de serviço e estoque",
         description:
-          "Sistema para controle de produtos, entradas e saídas de estoque, com alertas de reposição, relatórios de movimentação e gestão de múltiplos armazéns.",
-        tags: ["Node.js", "PostgreSQL", "Prisma"],
+          "Sistema para oficinas de motos com controle de atendimento, ordem de serviço e estoque de peças, acompanhando cada veículo do registro à entrega.",
+        tags: ["Node.js", "Express", "APIs", "React", "JavaScript"],
+        accent: "yellow",
       },
       {
         images: [projectBot, projectBot2, projectBot3],
-        title: "Automação de Mensagens com IA",
-        subtitle: "Chatbot de atendimento",
+        title: "Sistema de automação de anúncios do mercado livre e bot do telegram",
+        subtitle: "Automação de anúncios e mensagens",
         description:
-          "Plataforma de automação de mensagens para WhatsApp e Telegram, com fluxos configuráveis, respostas automáticas por IA e painel de estatísticas.",
-        tags: ["Node.js", "OpenAI", "Redis"],
-      },
-      {
-        images: [projectDecoradora, projectDecoradora2, projectDecoradora3],
-        title: "Website para Decoradora de Festas",
-        subtitle: "Landing page",
-        description:
-          "Site institucional para divulgação de serviços de decoração de festas, com galeria de trabalhos, apresentação de pacotes e canal de contato.",
-        tags: ["HTML 5", "CSS 3", "JavaScript"],
-      },
-      {
-        images: [projectLoja, projectLoja2, projectLoja3],
-        title: "Loja Virtual de Roupas",
-        subtitle: "E-commerce front-end",
-        description:
-          "Loja online com catálogo de produtos, página de detalhes, carrinho de compras e fluxo de checkout responsivo.",
-        tags: ["React", "Tailwind CSS", "Vite"],
-      },
-      {
-        images: [projectPainel, projectPainel2, projectPainel3],
-        title: "Painel Administrativo",
-        subtitle: "Dashboard web",
-        description:
-          "Painel de gestão com estatísticas, gráficos, tabela de usuários com filtros e páginas de configuração da conta.",
-        tags: ["React", "TypeScript", "Recharts"],
+          "Sistema que automatiza a publicação de anúncios no Mercado Livre e envia as ofertas por um bot no Telegram, com fluxos configuráveis e painéis de acompanhamento.",
+        tags: [
+          "Node.js",
+          "Express",
+          "APIs",
+          "React",
+          "JavaScript",
+          "API Mercado Livre",
+          "API Telegram",
+        ],
+        accent: "yellow",
       },
     ],
   },
