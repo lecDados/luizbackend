@@ -7,7 +7,7 @@ const BOT_HANDLE = "@Anuncios_filtrados_bot";
 export function TelegramInvite() {
   return (
     <section id="telegram" className="px-6 py-10">
-      <div className="mx-auto max-w-[1200px]">
+      <div className="mx-auto max-w-[960px]">
         <div className="grid items-center gap-6 overflow-hidden rounded-xl border border-invite-edge bg-invite-surface p-6 shadow-card sm:grid-cols-[auto_1fr] sm:p-8 lg:grid-cols-[auto_1fr_auto]">
           <a
             href={BOT_URL}
