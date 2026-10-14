@@ -92,7 +92,7 @@ export function Skills() {
 
               <div
                 className="rounded-lg border border-white/20 px-4 py-3 shadow-card"
-                style={{ backgroundImage: "linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%)" }}
+                style={{ backgroundImage: "linear-gradient(135deg, #f97316 0%, #ec4899 100%)" }}
               >
                 <h3 className="text-sm font-semibold text-white">
                   VMs &amp; Cloud
@@ -106,7 +106,7 @@ export function Skills() {
 
               <div
                 className="rounded-lg border border-white/20 px-4 py-3 shadow-card"
-                style={{ backgroundImage: "linear-gradient(135deg, #22c55e 0%, #06b6d4 100%)" }}
+                style={{ backgroundImage: "linear-gradient(135deg, #f97316 0%, #ec4899 100%)" }}
               >
                 <h3 className="text-sm font-semibold text-white">
                   Distribuições Linux mais usadas em VMs
