@@ -13,7 +13,7 @@ export function TelegramInvite() {
             href={BOT_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="mx-auto block h-24 w-24 shrink-0 overflow-hidden rounded-xl border border-invite-edge sm:mx-0 sm:h-28 sm:w-28"
+            className="block h-24 w-24 shrink-0 overflow-hidden rounded-xl border border-invite-edge sm:h-28 sm:w-28"
             title="Abrir o bot no Telegram"
           >
             <img
@@ -33,14 +33,14 @@ export function TelegramInvite() {
             <h3 className="mt-2 text-xl font-semibold tracking-tight text-card-foreground sm:text-2xl">
               Teste em tempo real
             </h3>
-            <p className="mt-2 max-w-prose text-sm leading-relaxed text-muted-foreground">
+            <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
               Entre no chat do bot e veja as ofertas do Mercado Livre chegando no
               Telegram na mesma hora. Qualquer mensagem que você enviar recebe
               resposta do sistema.
             </p>
           </div>
 
-          <div className="flex flex-wrap items-center gap-3 lg:flex-col lg:items-end">
+          <div className="flex flex-col items-start gap-3 lg:items-end">
             <a
               href={BOT_URL}
               target="_blank"
