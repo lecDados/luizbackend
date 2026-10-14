@@ -4,6 +4,7 @@ import { Solutions } from "@/components/portfolio/Solutions";
 import { Services } from "@/components/portfolio/Services";
 
 import { Projects } from "@/components/portfolio/Projects";
+import { TelegramInvite } from "@/components/portfolio/TelegramInvite";
 import { Skills } from "@/components/portfolio/Skills";
 import { Contact } from "@/components/portfolio/Contact";
 import { Footer } from "@/components/portfolio/Footer";
@@ -45,6 +46,7 @@ function Portfolio() {
         <Solutions />
         <Services />
         <Projects />
+        <TelegramInvite />
         <Skills />
         <Contact />
 

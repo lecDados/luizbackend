@@ -40,6 +40,11 @@
   --color-project-blue-foreground: var(--project-blue-foreground);
   --color-project-blue-muted: var(--project-blue-muted);
   --color-project-highlight: var(--project-highlight);
+  --color-invite-surface: var(--invite-surface);
+  --color-invite-edge: var(--invite-edge);
+  --color-invite-accent: var(--invite-accent);
+  --color-invite-accent-foreground: var(--invite-accent-foreground);
+  --color-invite-muted: var(--invite-muted);
   --color-footer-surface: var(--footer-surface);
   --color-footer-edge: var(--footer-edge);
   --color-footer-muted: var(--footer-muted);
