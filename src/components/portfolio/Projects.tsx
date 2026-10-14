@@ -16,12 +16,6 @@ import apiAuthSite2Asset from "@/assets/api-auth-site-2.png.asset.json";
 const apiAuthTelegram = apiAuthTelegramAsset.url;
 const apiAuthSite1 = apiAuthSite1Asset.url;
 const apiAuthSite2 = apiAuthSite2Asset.url;
-import projectPagamentos from "@/assets/project-pagamentos.jpg";
-import projectPagamentos2 from "@/assets/project-pagamentos-2.jpg";
-import projectPagamentos3 from "@/assets/project-pagamentos-3.jpg";
-import projectCotacoes from "@/assets/project-cotacoes.jpg";
-import projectCotacoes2 from "@/assets/project-cotacoes-2.jpg";
-import projectCotacoes3 from "@/assets/project-cotacoes-3.jpg";
 
 type Project = {
   images: string[];
