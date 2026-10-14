@@ -38,22 +38,22 @@ export function TelegramInvite() {
               Telegram na mesma hora. Qualquer mensagem que você enviar recebe
               resposta do sistema.
             </p>
+          </div>
 
-            <div className="mt-5 flex flex-wrap items-center gap-3">
-              <a
-                href={BOT_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-invite-accent px-5 py-2.5 text-sm font-semibold text-invite-accent-foreground shadow-card transition-opacity hover:opacity-90"
-              >
-                <Send className="h-4 w-4" aria-hidden />
-                Abrir chat no Telegram
-                <ArrowUpRight className="h-4 w-4" aria-hidden />
-              </a>
-              <span className="text-sm font-medium text-invite-muted">
-                {BOT_HANDLE}
-              </span>
-            </div>
+          <div className="flex flex-wrap items-center gap-3 lg:flex-col lg:items-end">
+            <a
+              href={BOT_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-invite-accent px-5 py-2.5 text-sm font-semibold text-invite-accent-foreground shadow-card transition-opacity hover:opacity-90"
+            >
+              <Send className="h-4 w-4" aria-hidden />
+              Abrir chat no Telegram
+              <ArrowUpRight className="h-4 w-4" aria-hidden />
+            </a>
+            <span className="text-sm font-medium text-invite-muted">
+              {BOT_HANDLE}
+            </span>
           </div>
         </div>
       </div>
