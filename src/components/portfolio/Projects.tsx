@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import inventoryProject from "@/assets/inventory-project.jpg";
 import oficinaMoto from "@/assets/oficina-moto.jpg";
@@ -16,12 +16,6 @@ import apiAuthSite2Asset from "@/assets/api-auth-site-2.png.asset.json";
 const apiAuthTelegram = apiAuthTelegramAsset.url;
 const apiAuthSite1 = apiAuthSite1Asset.url;
 const apiAuthSite2 = apiAuthSite2Asset.url;
-import projectPagamentos from "@/assets/project-pagamentos.jpg";
-import projectPagamentos2 from "@/assets/project-pagamentos-2.jpg";
-import projectPagamentos3 from "@/assets/project-pagamentos-3.jpg";
-import projectCotacoes from "@/assets/project-cotacoes.jpg";
-import projectCotacoes2 from "@/assets/project-cotacoes-2.jpg";
-import projectCotacoes3 from "@/assets/project-cotacoes-3.jpg";
 
 type Project = {
   images: string[];
@@ -85,42 +79,24 @@ const groups: Group[] = [
   {
     category: "Projetos em produção",
     online: true,
-    carousel: true,
     projects: [
       {
         images: [apiAuthSite1, apiAuthTelegram, apiAuthSite2],
-        title: "API de Autenticação",
+        title: "Sistema de automação",
         subtitle: "Serviço back-end",
         description:
-          "API REST para autenticação e gestão de usuários, com tokens JWT, validação de dados, testes automatizados e documentação de endpoints.",
+          "Sistema que automatiza o envio constante de anúncios do Mercado Livre para o Telegram. Para isso foram usadas as APIs do Mercado Livre e do Telegram. Mais detalhes no GitHub.",
         tags: [
           "Node.js",
           "Express",
+          "APIs",
           "API Mercado Livre",
           "API Telegram",
           "Oracle",
           "Linux",
-          "JWT",
-          "Zod",
         ],
         accent: "blue",
-        link: "https://github.com/lecDados",
-      },
-      {
-        images: [projectPagamentos, projectPagamentos2, projectPagamentos3],
-        title: "API de Pagamentos",
-        subtitle: "Integração financeira",
-        description:
-          "Serviço de processamento de pagamentos com webhooks, conciliação de transações, painel de acompanhamento e tratamento de falhas com retentativas.",
-        tags: ["Node.js", "PostgreSQL", "Webhooks"],
-      },
-      {
-        images: [projectCotacoes, projectCotacoes2, projectCotacoes3],
-        title: "API de Cotações em Tempo Real",
-        subtitle: "Serviço de mercado",
-        description:
-          "Serviço de cotações financeiras em tempo real com filas de processamento, cache de mercado e monitoramento de performance das mensagens.",
-        tags: ["Node.js", "Redis", "WebSockets"],
+        link: "https://github.com/lecDados/automacao_anunciosMercadoLivre_telegram",
       },
     ],
   },
@@ -210,8 +186,8 @@ function ProjectCard({ project }: { project: Project }) {
             rel="noopener noreferrer"
             className="mt-4 inline-flex w-fit items-center justify-center gap-2 rounded-full bg-blue-500/90 px-5 py-2 text-sm font-semibold text-white shadow-card transition-colors hover:bg-blue-500"
           >
-            Ver aplicação
-            <span aria-hidden>→</span>
+            <Github className="h-4 w-4" aria-hidden />
+            Ver no GitHub
           </a>
         )}
       </div>
