@@ -40,6 +40,11 @@
   --color-project-blue-foreground: var(--project-blue-foreground);
   --color-project-blue-muted: var(--project-blue-muted);
   --color-project-highlight: var(--project-highlight);
+  --color-invite-surface: var(--invite-surface);
+  --color-invite-edge: var(--invite-edge);
+  --color-invite-accent: var(--invite-accent);
+  --color-invite-accent-foreground: var(--invite-accent-foreground);
+  --color-invite-muted: var(--invite-muted);
   --color-footer-surface: var(--footer-surface);
   --color-footer-edge: var(--footer-edge);
   --color-footer-muted: var(--footer-muted);
@@ -74,6 +79,11 @@
   --project-blue-foreground: oklch(0.96 0.025 240);
   --project-blue-muted: oklch(0.81 0.07 240);
   --project-highlight: oklch(0.7 0.15 55);
+  --invite-surface: oklch(0.16 0.02 245);
+  --invite-edge: oklch(0.32 0.05 240);
+  --invite-accent: oklch(0.65 0.15 240);
+  --invite-accent-foreground: oklch(0.98 0.01 240);
+  --invite-muted: oklch(0.78 0.05 240);
   --radius: 0.625rem;
   --footer-surface: oklch(0.035 0.004 270);
   --footer-edge: oklch(0.11 0.005 270);
