@@ -8,7 +8,7 @@ export function TelegramInvite() {
   return (
     <section id="telegram" className="px-6 py-10">
       <div className="mx-auto max-w-[960px]">
-        <div className="flex flex-col items-start gap-5 overflow-hidden rounded-xl border border-invite-edge bg-invite-surface p-6 shadow-card sm:flex-row sm:items-center sm:gap-6 sm:p-8 lg:justify-center lg:gap-10">
+        <div className="flex flex-col items-start gap-5 overflow-hidden rounded-xl border border-invite-edge bg-invite-surface p-6 shadow-card sm:flex-row sm:items-center sm:gap-6 sm:p-8 lg:gap-10">
           <a
             href={BOT_URL}
             target="_blank"
@@ -32,7 +32,7 @@ export function TelegramInvite() {
             </p>
           </div>
 
-          <div className="flex flex-col items-start gap-3 lg:items-end">
+          <div className="flex flex-col items-start gap-3 sm:ml-auto lg:items-end">
             <a
               href={BOT_URL}
               target="_blank"
