@@ -8,7 +8,7 @@ export function TelegramInvite() {
   return (
     <section id="telegram" className="px-6 py-10">
       <div className="mx-auto max-w-[960px]">
-        <div className="grid items-center gap-6 overflow-hidden rounded-xl border border-invite-edge bg-invite-surface p-6 shadow-card sm:grid-cols-[auto_1fr] sm:p-8 lg:grid-cols-[auto_1fr_auto]">
+        <div className="flex flex-col items-start gap-5 overflow-hidden rounded-xl border border-invite-edge bg-invite-surface p-6 shadow-card sm:flex-row sm:items-center sm:gap-6 sm:p-8 lg:justify-center lg:gap-10">
           <a
             href={BOT_URL}
             target="_blank"
@@ -29,14 +29,6 @@ export function TelegramInvite() {
           <div className="min-w-0">
             <p className="text-sm font-semibold text-invite-muted">
               <span className="text-invite-accent">//</span> demonstração ao vivo
-            </p>
-            <h3 className="mt-2 text-xl font-semibold tracking-tight text-card-foreground sm:text-2xl">
-              Teste em tempo real
-            </h3>
-            <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-              Entre no chat do bot e veja as ofertas do Mercado Livre chegando no
-              Telegram na mesma hora. Qualquer mensagem que você enviar recebe
-              resposta do sistema.
             </p>
           </div>
 
