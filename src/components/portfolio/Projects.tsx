@@ -1,15 +1,6 @@
 import { useState } from "react";
-import { ChevronLeft, ChevronRight, Github } from "lucide-react";
+import { Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import inventoryProject from "@/assets/inventory-project.jpg";
-import oficinaMoto from "@/assets/oficina-moto.jpg";
-import automacaoPlanilhas from "@/assets/automacao-planilhas.jpg";
-import projectEstoque from "@/assets/project-estoque.jpg";
-import projectPainel from "@/assets/project-painel.jpg";
-import projetoPi from "@/assets/projeto-pi.jpg";
-import projectBot from "@/assets/project-bot.jpg";
-import projectBot2 from "@/assets/project-bot-2.jpg";
-import projectBot3 from "@/assets/project-bot-3.jpg";
 import apiAuthTelegramAsset from "@/assets/api-auth-telegram.png.asset.json";
 import apiAuthSite1Asset from "@/assets/api-auth-site-1.png.asset.json";
 import apiAuthSite2Asset from "@/assets/api-auth-site-2.png.asset.json";
@@ -30,52 +21,10 @@ type Project = {
 type Group = {
   category: string;
   online?: boolean;
-  carousel?: boolean;
   projects: Project[];
 };
 
 const groups: Group[] = [
-  {
-    category: "Projetos finalizados",
-    carousel: true,
-    projects: [
-      {
-        images: [inventoryProject, oficinaMoto, automacaoPlanilhas],
-        title: "Sistema para fluxo de caixa e controle estoque para barbearia",
-        subtitle: "Gestão financeira e de estoque",
-        description:
-          "Sistema para barbearias com controle de fluxo de caixa e gestão de estoque, registrando entradas, saídas, produtos e relatórios de movimentação.",
-        tags: ["Node.js", "Express", "APIs", "React", "JavaScript"],
-        accent: "yellow",
-      },
-      {
-        images: [projectEstoque, projectPainel, projetoPi],
-        title: "Sistema para controle de atendimento para oficina de moto com ordem de serviço e controle de estoque",
-        subtitle: "Ordens de serviço e estoque",
-        description:
-          "Sistema para oficinas de motos com controle de atendimento, ordem de serviço e estoque de peças, acompanhando cada veículo do registro à entrega.",
-        tags: ["Node.js", "Express", "APIs", "React", "JavaScript"],
-        accent: "yellow",
-      },
-      {
-        images: [projectBot, projectBot2, projectBot3],
-        title: "Sistema de automação de anúncios do mercado livre e bot do telegram",
-        subtitle: "Automação de anúncios e mensagens",
-        description:
-          "Sistema que automatiza a publicação de anúncios no Mercado Livre e envia as ofertas por um bot no Telegram, com fluxos configuráveis e painéis de acompanhamento.",
-        tags: [
-          "Node.js",
-          "Express",
-          "APIs",
-          "React",
-          "JavaScript",
-          "API Mercado Livre",
-          "API Telegram",
-        ],
-        accent: "yellow",
-      },
-    ],
-  },
   {
     category: "Projetos em produção",
     online: true,
@@ -195,56 +144,6 @@ function ProjectCard({ project }: { project: Project }) {
   );
 }
 
-function ProjectCarousel({ projects }: { projects: Project[] }) {
-  const [index, setIndex] = useState(0);
-
-  const prev = () =>
-    setIndex((i) => (i - 1 + projects.length) % projects.length);
-  const next = () => setIndex((i) => (i + 1) % projects.length);
-  const project = projects[index];
-
-  return (
-    <div>
-      <ProjectCard key={project.title} project={project} />
-
-      <div className="mt-4 flex items-center justify-center gap-4">
-        <button
-          type="button"
-          onClick={prev}
-          aria-label="Projeto anterior"
-          className="flex h-9 w-9 items-center justify-center rounded-full border border-border bg-secondary text-muted-foreground transition-colors hover:bg-accent hover:text-foreground"
-        >
-          <ChevronLeft size={18} />
-        </button>
-        <div className="flex items-center gap-1.5">
-          {projects.map((p, i) => (
-            <button
-              key={p.title}
-              type="button"
-              onClick={() => setIndex(i)}
-              aria-label={`Ir para projeto ${i + 1}`}
-              className={`h-1.5 w-1.5 rounded-full transition-colors ${
-                i === index ? "bg-orange-400" : "bg-muted-foreground/50"
-              }`}
-            />
-          ))}
-          <span className="ml-2 text-xs text-muted-foreground">
-            {index + 1} / {projects.length}
-          </span>
-        </div>
-        <button
-          type="button"
-          onClick={next}
-          aria-label="Próximo projeto"
-          className="flex h-9 w-9 items-center justify-center rounded-full border border-border bg-secondary text-muted-foreground transition-colors hover:bg-accent hover:text-foreground"
-        >
-          <ChevronRight size={18} />
-        </button>
-      </div>
-    </div>
-  );
-}
-
 export function Projects() {
   return (
     <section id="projects" className="px-6 py-20">
@@ -275,13 +174,9 @@ export function Projects() {
                   </span>
                 )}
               </div>
-              {group.carousel ? (
-                <ProjectCarousel projects={group.projects} />
-              ) : (
-                group.projects.map((project) => (
-                  <ProjectCard key={project.title} project={project} />
-                ))
-              )}
+              {group.projects.map((project) => (
+                <ProjectCard key={project.title} project={project} />
+              ))}
             </div>
           ))}
         </div>
