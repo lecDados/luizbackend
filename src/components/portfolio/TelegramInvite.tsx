@@ -7,8 +7,8 @@ const BOT_HANDLE = "@Anuncios_filtrados_bot";
 export function TelegramInvite() {
   return (
     <section id="telegram" className="px-6 py-10">
-      <div className="mx-auto max-w-[960px]">
-        <div className="flex flex-col items-start gap-5 overflow-hidden rounded-xl border border-invite-edge bg-invite-surface p-6 shadow-card sm:flex-row sm:items-center sm:gap-6 sm:p-8 lg:gap-10">
+      <div className="mx-auto w-full max-w-[640px]">
+        <div className="grid grid-cols-[auto_minmax(0,1fr)] items-center gap-5 overflow-hidden rounded-xl border border-invite-edge bg-invite-surface p-6 shadow-card sm:gap-7 sm:p-8">
           <a
             href={BOT_URL}
             target="_blank"
@@ -30,22 +30,21 @@ export function TelegramInvite() {
             <p className="text-sm font-semibold text-invite-muted">
               <span className="text-invite-accent">//</span> demonstração ao vivo
             </p>
-          </div>
-
-          <div className="flex flex-col items-start gap-3 sm:ml-auto lg:items-end">
-            <a
-              href={BOT_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 rounded-full bg-invite-accent px-5 py-2.5 text-sm font-semibold text-invite-accent-foreground shadow-card transition-opacity hover:opacity-90"
-            >
-              <Send className="h-4 w-4" aria-hidden />
-              Abrir chat no Telegram
-              <ArrowUpRight className="h-4 w-4" aria-hidden />
-            </a>
-            <span className="text-sm font-medium text-invite-muted">
-              {BOT_HANDLE}
-            </span>
+            <div className="mt-4 flex flex-wrap items-center gap-3">
+              <a
+                href={BOT_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-invite-accent px-5 py-2.5 text-sm font-semibold text-invite-accent-foreground shadow-card transition-opacity hover:opacity-90"
+              >
+                <Send className="h-4 w-4" aria-hidden />
+                Abrir chat no Telegram
+                <ArrowUpRight className="h-4 w-4" aria-hidden />
+              </a>
+              <span className="text-sm font-medium text-invite-muted">
+                {BOT_HANDLE}
+              </span>
+            </div>
           </div>
         </div>
       </div>
